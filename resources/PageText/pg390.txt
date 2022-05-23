@@ -1,0 +1,10 @@
+The Ghoul twitches and dies at your feet. You
+search its body and find little of interest. A couple of
+earrings, worth 1 Gold Piece - between them, are in
+one of its pockets. You take these. If you
+haven't already searched the first body, you do so
+and find 5 Gold Pieces, which you also take.
+You may also stop here, rest and eat Provisions. You
+add 2 Luck points for killing the Ghoul. Now
+you may either press on northwards (1) or
+search the second body (2).

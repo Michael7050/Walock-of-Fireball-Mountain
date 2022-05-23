@@ -1,0 +1,4 @@
+You feel a stone move and behind it you find a lever.
+Will you pull the lever, or leave it and return to the
+crossroads? If you dare pull the lever, (1). If
+you go back to the crossroads, (2).

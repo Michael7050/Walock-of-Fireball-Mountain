@@ -1,0 +1,9 @@
+After you have suffered your third wound, you
+notice that your strength is ebbing. Lose 1 SKILL
+point. You deduce that this is yet another magical
+power of this foul creature and you feel a shiver of
+panic. Will you continue or run? If you want to
+Escape, pay the penalty and flee
+through the north door. Otherwise the fight goes
+on, but from now on every third wound that the beast
+inflicts takes 1 point from your SKILL.

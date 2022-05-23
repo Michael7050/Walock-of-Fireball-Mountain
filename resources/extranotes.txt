@@ -1,0 +1,24 @@
+pg 91 test luck to add gold - change to runpage?
+pg 127 CHECK if have gold (can move?)
+pg 130 GAMBLE (move?)
+pg 131 provisions but half (can move)
+pg 139 CHOOSE KEYS (3)
+
+pg 173 CHECK for bow arrow (giver of sleep) run combat wound counter (3)
+pg 182 CHOOSE KEYS (3)
+pg 198 test luck then CHOOSE KEYS (3)
+pg 204 GAMBLE (move)
+
+pg 230 run combat wound encounter (move)
+pg 244 CHECK provisions (move)
+pg 249 enhanced combat (move)
+pg 259 statgain (change)
+
+pg 333 enh combat (move)
+pg 340 encounvet41? CHECK equpment
+pg346 gamble (move?) 
+
+
+
+
+press enter to continue

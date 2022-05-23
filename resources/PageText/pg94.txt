@@ -1,0 +1,5 @@
+You walk along a passageway that runs due south,
+then turns west. After several metres, it ends at a
+three-way junction. You can check for secret pass-
+ages along the way (1) or go straight to the
+junction (2).

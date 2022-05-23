@@ -1,0 +1,8 @@
+You are standing at a bend in the passage where you
+may go either west or south.
+To go west (1)
+To go south (2)
+If you want to check for secret
+passages on the way westwards (3)
+If you want to check for secret
+passages as you go south (4)

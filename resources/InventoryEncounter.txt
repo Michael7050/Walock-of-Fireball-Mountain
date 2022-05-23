@@ -1,0 +1,24 @@
+1 Sword(plus2)
+2 Key#9
+3 Wood-Shield
+4 Key#99
+5 Stakes
+6 Silver-Crucifix
+7 Cheese
+8 Helmet(plus1)
+9 Sword(plus1)
+10 Crucifix-Silver
+11 Y-Shaped-Sticks
+12 Boathouse-Key
+13 Invisibility-Potion Glove
+14 Jewel Key#111
+15 Key#111
+16 Bow-with-Silver-Arrows
+17 Book
+18 Mallet-and-Silver-Chisel
+19 Shield
+20 Key#125
+21 Blue-Candle
+22 Jewel
+23 Invisibility-Potion
+24 Glove

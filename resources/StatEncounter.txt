@@ -1,0 +1,8 @@
+1 pg109 statchanges
+2 pg125 luck
+3 pg151 stamloss
+4 pg163 testluck then combat
+5 pg213 check skill
+6 pg 243 rolldivce
+7 pg275 test luck and reduce stam if lose
+8 pg 396

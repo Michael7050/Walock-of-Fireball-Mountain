@@ -1,0 +1,8 @@
+You are at the south end of a north-south corridor.
+Looking northwards, you can see a passage coming
+off from the east wall. Do you want:
+To go up to this passage? (1)
+To check for secret passages as you
+walk northwards? (2)
+To go south, following a bend to
+the west? (3)

@@ -1,0 +1,8 @@
+The room is unoccupied and there seems to be no
+other means of exit. In the centre of the floor stands
+a table, and on this table are two helmets; one ot
+bronze and one of iron. Both are about your size.
+Will you try one on, or is this worth the risk?
+Try on the bronze helmet. (1)
+Try on the iron helmet. (2)
+Return to the junction. (3)

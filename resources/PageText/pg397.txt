@@ -1,0 +1,7 @@
+The door opens to reveal a small room with a stone
+floor and dirty walls. There is a stale smell in the air.
+In the centre of the room is a makeshift wooden
+table on which is standing a lit candle. Under the
+table is a small box. In the far corner of the room is a
+straw mattress. You may either open the box (1) or
+leave the room (2).

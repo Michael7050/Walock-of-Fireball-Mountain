@@ -1,0 +1,5 @@
+The barrels contain a clear brown liquid. You sniff it.
+It smells like rum. You taste it. It is rum. You cup
+your hands, pour some in and take a swig. You gasp
+—- by golly, it’s good! Restore 6 points of STAMINA
+and 1 Luck.

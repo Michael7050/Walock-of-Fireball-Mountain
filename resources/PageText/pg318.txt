@@ -1,0 +1,3 @@
+The passageway ends ina dead end. You may either
+return to the crossroads (1) or search for
+secret passageways (2).

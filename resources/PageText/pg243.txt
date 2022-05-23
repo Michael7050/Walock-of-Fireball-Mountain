@@ -1,0 +1,12 @@
+To your horror, you realize that this dummy lever
+was a trap! Although it looked like a handle, it was
+in fact a wax-coated sword blade and it has now cut
+your hand badly. Did you use your right or your left
+hand?
+Roll one die. If the number you roll is odd, this was
+your sword hand and your fighting prowess has
+been severely hampered. Lose 3 sK1L1 points and 1
+STAMINA. If you rolled an even number, you used
+your other hand, and so the injury is not quite so
+important. Lose 1 SKILL point and 2 STAMINA.
+Now pull the right lever.

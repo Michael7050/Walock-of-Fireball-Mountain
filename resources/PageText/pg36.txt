@@ -1,0 +1,10 @@
+The locked door bursts open and a nauseating
+stench hits your nostrils. Inside the room the floor is
+covered with bones, rotting vegetation and slime. A
+wild-haired old man, clothed in rags, rushes at you
+screaming. His beard is long and grey, and he is
+waving an old wooden chair-leg. Is he simply
+insane as he appears, or has this been some kind of
+trap? You may either shout at him to try to calm him
+down (1) or draw your sword and attack
+him (2).

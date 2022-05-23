@@ -1,0 +1,6 @@
+You are standing in a north-south passage. To the
+north you can see a passage off to the east. To
+investigate, (1). To the south, the passage
+turns westwards. You may go to the southern end
+of the passage instead (2). In the west wall in
+front of you is a secret door. To go through this, (3).

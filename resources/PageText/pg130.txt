@@ -1,0 +1,11 @@
+The old man asks you your stake. You may bet
+between 1 and 20 Gold Pieces (but not more than
+you possess!). He tosses the white dice he has been
+playing with to you and asks you to roll. Roll two
+dice once for yourself and once for the old man. If
+your total is higher, you win the amount of your
+stake from the old man. If his total is higher, you
+lose your stake. You may continue for as long as you
+have Gold Pieces, and then leave through the door
+and return to the junction. Add 2 points to your
+SKILL, STAMINA and LUCK scores if you have won.

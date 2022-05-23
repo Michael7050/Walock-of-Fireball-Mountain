@@ -1,0 +1,4 @@
+The passageway runs east for several metres and
+then runs north. You walk a long way northwards.
+You may check for secret passages along the way
+(1) or simply proceed northwards (2).

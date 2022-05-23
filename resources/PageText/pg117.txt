@@ -1,0 +1,2 @@
+You are in an east-west passageway. To go east,
+turn to (1). To go west (2).

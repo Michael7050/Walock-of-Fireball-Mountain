@@ -1,0 +1,7 @@
+The ear-piercing sound gets louder and louder. The
+pain is unbearable. Reduce your SKILL score by 1
+for the agony. You begin to grope in the dark fora
+wall. Do you head for:
+The west wall? (1)
+The north wall? (2)
+The east wall? (3)

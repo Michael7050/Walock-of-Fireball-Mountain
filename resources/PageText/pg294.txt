@@ -1,0 +1,6 @@
+You find 5 Gold Pieces in the pockets of the corpse.
+Enter these on your Adventure Sheet and add 1 LUCK
+point for your find. You may now either:
+Search the second body (1)
+Search the third body (2)
+Tiptoe through the room northwards (3)

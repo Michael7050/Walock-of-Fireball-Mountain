@@ -1,0 +1,12 @@
+Two of the keys fit the locks perfectly. The other
+doesn’t. You leap to one side as a jet of clear liquid
+spurts from the chest. It just misses, but you lose
+2 STAMINA points as the liquid emits an acidic
+vapour which makes you cough and choke.
+You return to the chest and try another combination
+of three keys. Add the key totals and turn to that
+section.
+If you have no more keys to try, you sit down
+exhausted and in despair after having got so near to
+your goal. Remember to look for keys next time you
+enter the dungeon!

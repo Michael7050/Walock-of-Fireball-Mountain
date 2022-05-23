@@ -1,0 +1,10 @@
+You are standing at a crossroads. To the west the
+passageway goes on a few metres and turns north-
+wards. To the north the passageway ends at a door.
+To the east the passage continues and eventually
+turns southwards, Looking south, the passage goes
+on as far as you can see.
+To go west (1)
+To go north (2)
+To go south (3)
+To go east (4)

@@ -1,0 +1,13 @@
+The passageway ends in another wooden door, this
+time a small one with a carved bone handle. You
+listen but hear nothing coming from inside. You try
+the handle and the door opens into a pear-shaped
+room with a rough stone floor, making walking
+across it somewhat awkward. In one corner of the
+room is a pile of rubble, mainly stones and dust, but
+there are also two odd-shaped pieces of wood and a
+length of rope. A door in the north wall leads on.
+Will you:
+Examine the bits of wood? (1)
+Study the length of rope? (2)
+Leave through the north door? (3)

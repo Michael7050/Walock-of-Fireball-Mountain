@@ -1,0 +1,4 @@
+The corridor goes east for several metres, then
+south, then east again, where it finally ends. Will
+you investigate the dead end (1) or return
+to the crossroads (2)?

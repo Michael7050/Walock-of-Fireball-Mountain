@@ -1,0 +1,14 @@
+You pick up the rope. It looks normal. In fact it looks
+as if it might be quite useful. You open your pack to
+put it in. Suddenly, it comes alive in your fingers,
+snakes quickly up your arm and attempts to wrap
+itself around your neck. You struggle to cut the rope
+with your sword before its grip tightens. Test your
+Luck. If you are Lucky, you cut the rope and it drops
+to the ground. If you are not, the rope tightens—lose
+1 STAMINA point. You must Test your Luck again to
+try to cut the rope, and keep trying until you do.
+Each time you fail, you lose another STAMINA
+point (and reduce your LUCK score). If you finally
+defeat the rope, you may leave through the north
+door.

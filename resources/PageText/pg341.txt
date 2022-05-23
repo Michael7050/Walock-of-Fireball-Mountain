@@ -1,0 +1,7 @@
+The old man glares at you as you enter the room.
+You may either apologize, explain that you lost your
+way and leave through either the door in the west
+(1) or south (2) walls, or alterna-
+tively you may try to talk to the old man. If you want
+to talk to him, you can either be pleasant (3)
+or you can demand that he answers your questions (4).

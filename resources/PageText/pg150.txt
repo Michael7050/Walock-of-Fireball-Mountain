@@ -1,0 +1,4 @@
+You are at a three-way junction.
+To go north, (1).
+To go east, (2).
+To go south, (3).

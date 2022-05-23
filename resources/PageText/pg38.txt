@@ -1,0 +1,8 @@
+You open the door to find the Werewolf’s larder, a
+miscellaneous collection of bones and decaying
+meats. The smell is nauseating, although a jar of
+pickled eggs seems to offer fairly palatable food. If
+you wish to take these, there will be enough for two
+meals; add 2 points to your Provisions.
+Back in the room you may now go out through the
+south door.

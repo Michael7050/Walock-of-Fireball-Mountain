@@ -1,0 +1,9 @@
+With the Warlock now defeated, you know your
+quest is almost over. You approach the door with
+two locks. There are no keys around. You retrieve
+two keys from your pack and try them in the locks.
+They turn! You open the door and peer round (1).
+If you have no keys, you may try to break
+down the door, and this you will do at the cost of
+almost all your STAMINA. Reduce your STAMINA
+by 5 and enter the room. (2).

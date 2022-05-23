@@ -1,0 +1,25 @@
+You awake with a throbbing head and look around.
+The room is about eight metres square, with doors
+to the north and south. You have been dumped in
+the south-west corner. Standing motionless in the
+centre of the room are four men. At least, they appear
+to be men. Their skin is a greeny-grey colour. Their
+_ clothes are tattered and torn - and they are all
+staring vacantly at the ceiling. One carries a club,
+one a scythe, one an axe and one a pick. They are
+ignoring you completely.
+Around the room are various peasant-style
+weapons (pitchforks, axe-handles, pointed sticks,
+etc.), one or two shields, and several barrels. In the
+north-east corner is a human corpse with a sword in
+one hand and a shield in the other. You move your
+hand up to your head to feel for signs of blood and
+you are relieved to find you are not bleeding. But as
+your hand moves, the strange creatures in the
+centre of the room turn their eyes down towards
+you. Do you:
+Try to talk to them? (1)
+Jump to your feet and charge them
+with your sword? (2)
+Scramble for an exit through the
+south door? (3)

@@ -1,0 +1,2 @@
+1 "GHOUL"
+2 "VAMPIRE"

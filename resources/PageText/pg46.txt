@@ -1,0 +1,5 @@
+You are standing in a short east-west passageway,
+with a door blocking the way to the east. To the
+west, the passage turns southwards after several
+metres. To go round this bend (1). To go
+through the door, (2).

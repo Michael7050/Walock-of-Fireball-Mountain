@@ -1,0 +1,5 @@
+You are at a crossroads.
+To go north (1).
+To go south (2).
+To go east (3).
+To go west (4).

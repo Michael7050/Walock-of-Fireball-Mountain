@@ -1,0 +1,4 @@
+You grope along the wall but can find no way of
+escape. The noise is causing you to scream in pain!
+Subtract 1 SKILL point. You may try either the east
+wall (1) or the north wall (2).

@@ -1,0 +1,16 @@
+You leave the cavern along a long, narrow corridor.
+After several hundred metres, it ends at a large
+wooden door which is slightly ajar. Carefully you
+ease it open a little further and poke your head
+around the side to see what is in the room. You see a
+small old man sitting at a table on his own, playing
+with a pack of cards. He looks quite a harmless old
+soul, grey-haired and bearded. He is seated, What
+will you do:
+Burst through the door, sword
+drawn, to surprise the old man? (1)
+Knock on the door and enter,
+greeting the old man
+courteously? (2)
+Get down on all fours and try to
+creep into the room unnoticed? (3)

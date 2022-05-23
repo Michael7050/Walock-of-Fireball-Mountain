@@ -1,0 +1,4 @@
+Test your Luck three times. If you are Lucky each
+time, you make it across to the far door and can
+leave the room. On the first throw that
+you are Unlucky, you step on a hand tile.

@@ -1,0 +1,13 @@
+During your adventure, you will have come across
+various keys and should have collected some of
+these. You may now use three of these keys to try to
+open the locks on the chest.
+Each key is identified with a number. To determine
+whether you have the right keys, add their three
+numbers together. Now turn to the section which
+has the same number as this total, where you will
+discover whether you have used the correct keys.
+If you do not have three numbered keys, this is the
+end of your journey. You sit on the chest and weep
+as you realize that you will have to explore the
+mountain once more in order to find the keys.

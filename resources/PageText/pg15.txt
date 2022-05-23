@@ -1,0 +1,9 @@
+As you sit on the bench and eat your food, you begin
+to feel deeply relaxed and the aches from your body
+seem to be soothing themselves away. This resting
+place is enchanted. You may restore 2 additional
+STAMINA points as well as the normal amount (but
+only if this does not exceed vour Initial STAMINA
+score) and restore 1 SKILL point if any have been
+lost. When you are ready to continue, move along
+the passage.

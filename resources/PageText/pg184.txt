@@ -1,0 +1,6 @@
+You are alone in the Boat House and have some time
+to search before the Skeletons will inevitably return.
+You may either search the drawers (1) in
+the room, or may investigate the tools (2)
+before they come back. As you begin to search you
+hear a noise from behind the door in the north wall.

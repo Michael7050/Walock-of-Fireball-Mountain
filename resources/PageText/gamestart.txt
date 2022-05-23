@@ -1,0 +1,8 @@
+Welcome to The Warlock of Firetop Mountain!
+
+This program uses the content of the original
+Fighting Fantasy book, first published in 1982
+and written by Steve Jackson and Ian Livingstone.
+
+It has been turned into a Java Program by Michael Jones
+for his COMP603 assignment.

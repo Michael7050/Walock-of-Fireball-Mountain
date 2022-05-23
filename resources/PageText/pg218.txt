@@ -1,0 +1,13 @@
+You are on the south bank of an underground river
+facing across its black depths. There appear to be
+four ways of crossing. To your left, a rusted bell
+bears the sign: ‘Ferry Service 2 Gold Pieces — Please
+ring.’ There is a small raft in front of you on the
+bank with a long stick resting beside it: you could
+punt across the river. A rickety old bridge crosses on
+the right. If you don’t trust any of these, you may
+swim. Which will you choose?
+Ring the bell (1)
+Punt the raft across Turn to (2)
+Risk the bridge Turn to (3)
+Swim (4)

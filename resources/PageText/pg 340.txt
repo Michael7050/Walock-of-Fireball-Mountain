@@ -1,0 +1,7 @@
+You try various items of equipment against the gaze
+of the painting, but none seems to work. You may
+try any of the following if you have them:
+Slash the painting with your sword. (1)
+Hold a jewel up in front of it. (2)
+Plunge a wooden stake into it. (3)
+Throw cheese at it. (4)

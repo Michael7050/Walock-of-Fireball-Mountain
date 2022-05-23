@@ -1,0 +1,4 @@
+You are at a junction where you may go north (1),
+although this passage ends shortly in a dead
+end. You may go west (2) or you may go
+south (3).

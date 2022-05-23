@@ -1,0 +1,8 @@
+You rummage through your haversack. What is in
+there? You may attempt to use any of the following
+items if you have them on your Equipment List:
+Potion of Invisibility (1)
+The Eye of the Cyclops (2)
+A piece of Cheese (3)
+Bow with Silver Arrow (4)
+A Y-shaped Stick (5)

@@ -1,0 +1,9 @@
+You climb on the raft and start to punt your way .
+across the river. The going is not easy. In the middle
+of the river the raft seems to take on a will of its own
+and bobs up and down dangerously. You realize it is
+attempting to capsize itself and throw you into the
+river! You may either trust your strength and luck to
+hold on and keep punting to the north side (1)
+or jump into the water and attempt to swim back
+to the south bank (2).

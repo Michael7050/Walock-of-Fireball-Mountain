@@ -1,0 +1,4 @@
+You see a well-used door on the right-hand (east)
+side of the passageway. With your ear to the
+keyhole, you listen and hear a man screaming for
+help from inside. Will you open the door (1) or walk on (2)?

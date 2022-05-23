@@ -1,0 +1,8 @@
+As you pull the knob, a deafening clanging noise
+rings through the passageways. You frantically
+push the knob back to stop the alarm, but it has
+already had its effect. You can hear footsteps
+coming closer down the corridor.
+When you have defeated this creature, you may
+either return to the junction (1) or you may
+push the knob (2).

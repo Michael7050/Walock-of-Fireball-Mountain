@@ -1,0 +1,4 @@
+You are standing in a narrow corridor. Behind you is
+a secret door to the east. Ahead of you is a cross-
+roads. To go through the door, (1). To walk
+to the crossroads, (2).

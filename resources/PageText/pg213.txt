@@ -1,0 +1,7 @@
+The door is locked. You may try to charge it down by
+rolling two dice. If the number rolled is equal to or
+less than your SKILL score, the door bursts open.
+If the number is greater than your SKILL
+score, the door remains locked, you lose 1
+STAMINA point for your bruised shoulder and you
+must progress up the passage.

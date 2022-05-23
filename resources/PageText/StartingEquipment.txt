@@ -1,0 +1,25 @@
+You will start your adventure with a bare minimum
+of equipment, but you may find other items during
+your travels. You are armed with a sword and are
+dressed in leather armour. You have a rucksack
+(haversack, backpack) on your back to hold your
+Provisions and any treasures you may come across.
+You also carry a lantern which lights your way.
+In addition, you may take one bottle of a magical
+potion which will aid you on your quest. You may
+choose to take a bottle of any of the following:
+A Potion of Skill — restores sKILL points
+A Potion of Strength ~ restores STA MINA points
+A Potion of Fortune — restores LUCK points and
+adds 1 to Initial LUCK
+These potions may be taken at any time during your
+adventure. Taking a measure of potion will restore
+SKILL, STAMINA Or LUCK scores to their Initial
+level (and the Potion of Fortune will add 1 point to
+your Initial LUCK score before LUCK is restored).
+Each bottle of potion contains enough for two
+measures i.e. the characteristic may be restored
+twice during an adventure. Each time it is used
+make a note on your Adventure Sheet.
+Remember also that you may only choose one of the
+three potions to take on your trip, so choose wisely!

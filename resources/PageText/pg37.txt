@@ -1,0 +1,2 @@
+Standing at the crossroads you may go either north
+(1), west (2) or south (3).

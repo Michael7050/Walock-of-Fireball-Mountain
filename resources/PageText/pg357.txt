@@ -1,0 +1,5 @@
+The passage runs for some distance northwards and
+then starts to open into a large cavern with rough
+walls. There appears to be no way through. Will you
+return to the junction (1) or enter the
+cavern (2)?

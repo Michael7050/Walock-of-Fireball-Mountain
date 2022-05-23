@@ -1,0 +1,4 @@
+You are standing at the north end of a short
+north-south passage. You are at a dead end. To
+investigate the wall, turn to (1). To go southwards,
+turn to (2).

@@ -1,0 +1,10 @@
+The water is icy cold. You start to swim and notice
+that your splashings are attracting a moving ‘tur-
+bulence’ in the water. Will your strength and
+stamina hold out? Roll two dice. If the roll is equal to
+or less than your STAMINA Score, you believe you
+can make it and swim furiously for the north bank.
+If the roll totals more than your
+STAMINA score, you decide not to risk it and return
+to the south bank.
+You may eat Provisions on the south bank.

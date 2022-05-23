@@ -1,0 +1,6 @@
+You are in a short passageway which comes to a
+dead end several metres ahead of you. You may
+search for secret passages (1), or you may
+return to the crossroads and either follow the pass-
+age ahead to the north (turn to 366), or turn to the
+west (2).

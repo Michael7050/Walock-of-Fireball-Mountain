@@ -1,0 +1,14 @@
+As you enter the cavern you hear loud footsteps
+behind you, crunching heavily on the rocky floor.
+You crouch down beside the entrance in a small
+alcove in the rock. The steps get louder and you see
+a great OGRE enter the cavern! He stands over two
+metres tall and is dressed in ill-fitting garments
+made from some sort of hide. He carries a large
+wooden club. You may:
+Attack him as he enters (1).
+Try to creep out without him
+noticing you (2).
+Try to distract him by throwing
+something into a far corner
+of the cavern (3).

@@ -1,0 +1,7 @@
+You charge the door, hitting it squarely with your
+shoulder. Roll 2 dice. If the number rolled is equal to
+or less than your SKILL score, the door opens.
+If the number exceeds your SKILL Score, the
+door shudders but does not budge, and you wince
+in pain as you hit the door — lose 1 STAMINA point
+and continue up the corridor.

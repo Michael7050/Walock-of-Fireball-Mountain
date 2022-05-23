@@ -1,0 +1,3 @@
+The door is firmly locked. You may try to force it
+open (1) or you may continue along the
+corridor (2).

@@ -1,0 +1,6 @@
+You set off south along a cobbled passageway. It
+swings west, then south, then west again until you
+find yourself at a three-way junction.
+To go north (1)
+To go west (2)
+To go back east (3)

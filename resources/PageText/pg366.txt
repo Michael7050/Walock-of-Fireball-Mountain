@@ -1,0 +1,6 @@
+You are following a passageway which leads ahead
+to the north. After several metres it bends sharply to
+the east, You continue eastwards until you eventually
+come across a narrow opening in the north wall.
+You may go through this opening (1) or
+continue eastwards (2).

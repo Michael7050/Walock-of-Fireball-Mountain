@@ -1,0 +1,7 @@
+The green blood of the dead Orcs smells foul as it
+seeps from their bodies. You step around the
+corpses and investigate the chest. It is a sturdy
+affair, made of strong oak and iron, and it is firmly
+locked. You may try to smash the lock with your
+sword (1) or leave it alone and go through
+the open door (2).

@@ -1,0 +1,5 @@
+The passageway goes west and then south. Finally
+you come to a stop at a dead end. You may return to
+the three-way junction and go east (1) or
+north (2), or you may investigate the dead
+end (3).

@@ -1,0 +1,9 @@
+The four creatures shuffling towards you are mind-
+less ZOMBIES. Their vacant eyes suggest that
+their actions are controlled by a will which is not
+their own. You are still too dizzy to think properly,
+but you must act quickly. The first Zombie reaches
+you and prepares to swing his club. You must fight
+him.
+If you defeat the first Zombie, add 2 Luck points
+and turn to face the other three.

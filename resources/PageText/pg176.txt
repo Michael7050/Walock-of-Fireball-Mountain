@@ -1,0 +1,7 @@
+As you walk up the passage, it visibly widens and
+eventually you find yourself standing at the mouth
+of a rough cavern, a natural cave in the rock. As you
+look into the darkness, the cavern appears to be
+about 30 metres deep, with no visible exit. Do you
+want to go into the cavern (1) or go back to
+the junction (2)?

@@ -1,0 +1,13 @@
+As you swing your sword at the creature, it reaches
+out and catches the blade in its hand! Your weapon
+is almost ineffective against the considerable
+strength of the creature. You realize this and panic,
+but you must fight on. If you wish to
+try to Escape, which you may only do after 6 full
+Attack Rounds, you will have to be lucky. Test your
+Luck. If you are Lucky, you may Escape through the
+west door. If you are Unlucky, you
+must continue this fight for a further 6 Attack
+Rounds before trying to Escape again. If you roll an
+11 or 12 and you are Unlucky (i.e. your current
+LUCK score is below 11), then you end up on page 224.

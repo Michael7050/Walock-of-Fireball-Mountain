@@ -1,0 +1,14 @@
+You open the door to a large room. A large chair
+behind a solid-looking table suggests to you that
+someone, or something, of rank uses this room. A
+chest in the centre catches your eye. In a corner of
+the room stands a man-sized creature with a warty
+face, standing over a smaller creature of similar race.
+With the whip in his hand, the ORC CHIEFTAIN
+has been beating his servant, who is whimpering
+beneath him, Will you:
+Attack them both? (1)
+Spring at the Chieftain in the hope
+that his servant will aid you? (2)
+Leave the room and head back for
+the junction? (3)

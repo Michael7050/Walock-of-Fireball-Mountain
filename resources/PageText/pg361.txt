@@ -1,0 +1,8 @@
+You snatch the key from its hook. it has the number
+125 inscribed on it. But your lungs are bursting. Roll
+two dice. If the number is less than or equal to your
+SKILL score, you make it across the room to the
+door (1). If it exceeds your SKILL score,
+you are forced to take a breath of poison gas. Reduce
+your SKILL score by 2 and your STAMINA Score by
+3 and dash for the door (2).

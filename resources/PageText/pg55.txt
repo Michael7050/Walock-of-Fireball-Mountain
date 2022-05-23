@@ -1,0 +1,11 @@
+Roll two dice. If the total rolled is less than or equal
+to your LUCK score and is also less than or equal to
+your STAMINA Score, then you manage to hold on
+and manoeuvre the raft across to the north bank (do
+not deduct a LUCK point). You arrive safely but as
+you step on to the bank, the raft drifts away and
+makes its own way across the river to the south
+bank.
+If you exceed your LUCK and/or STAMINA totals,
+the raft throws you into the water and you start to
+swim back to the south bank.

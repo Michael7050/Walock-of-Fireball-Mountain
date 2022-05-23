@@ -1,0 +1,12 @@
+A sign above the door reads “Boat House’. The door
+is firmly locked but a small barred window allows
+you to look inside. You can see a number of
+Skeleton-men working on building a boat of some
+sort. They move in a series of quick, jerky actions,
+rather insect-like.
+If you have a key clearly labelled
+‘Boat House’ (1).
+If you want to try to break the door
+down, (2).
+If you want to return to the
+riverbank and try another route (3).

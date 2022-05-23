@@ -1,0 +1,11 @@
+You enter the cavern and look around to see dozens
+of beautifully coloured stalactites and stalagmites
+bordering the perimeter. Numerous drips can be
+heard, but the whole place seems like a magic
+grotto. Near the back of the cavern, you come across
+a pair of boots, which seem to have been made quite
+recently. Will you:
+Continue investigating the cavern? (1)
+Try on the boots? (2)
+Leave the cavern and return to the
+junction? (3)

@@ -1,0 +1,4 @@
+You find yourself at a door blocking the east end of
+an east-west passage. To go through the door, (1).
+Looking westwards, the passage turns to the
+north. To go this way, (2).

@@ -1,0 +1,10 @@
+You set off and find yourself in the middle of a
+north-south passageway. There is a door in the
+western wall of the passage. Opposite the door is a
+passage going off eastwards. To the north you can
+see a door some metres ahead. To the south you can
+see a junction. Which will you choose:
+The door in the west wall? (1)
+The door to the north? (2)
+Eastwards? (3)
+Southwards? (4)

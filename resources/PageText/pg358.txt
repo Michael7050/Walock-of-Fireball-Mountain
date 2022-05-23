@@ -1,0 +1,10 @@
+The battle will call upon all your reserves of strength
+and cunning. Your adversary has disappeared, and
+now stands at the far end of the room in front of a
+door with two locks. How will you approach him:
+Grip your sword firmly and
+advance towards him? (1)
+Look through your pack fora
+weapon to use? (2)
+Look around the room for another
+means of attack or defence? (3)

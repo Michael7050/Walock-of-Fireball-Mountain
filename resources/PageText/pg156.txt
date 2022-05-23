@@ -1,0 +1,6 @@
+You charge the door with your shoulder. Roll two
+dice. If the number rolled is less than or equal to
+your SKILL score, you succeed. If the
+number rolled is greater than your SKILL, you rub
+your bruised shoulder and decide against trying
+again. Return to the junction.

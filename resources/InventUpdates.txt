@@ -1,0 +1,106 @@
+1 pg27 sword choice
+2 pg34 swap
+3 pg50 choose key
+4 pg75 update invent
+5 testluckforgold pg 91
+6 pg105 checkinventanduse
+7 pg119 throw item
+8 pg127 goldspend
+9 pg130 gamble
+10 pg 131 provisions
+11 pg 132 choose shield
+12 pg139 keys
+13 pg145 keys
+14 pg155 shield
+15 pg170 crucifix
+16 pg173 enhanced combat
+17
+18 pg182 keys
+19 pg198 keys
+20 201 prov/glove/invis
+21 204 check gold
+22 pg211 check silver
+23 pg230 ghoul 4 wounds
+24 pg 244 check if provisions
+25 pg 249 choose to  move on after enh combat
+26 add key and choose provisions pg 258
+27 check for boathouse key pg264
+28 add bow silver arrow pg266 choose provs
+29 pg273 add stake and mallet
+30 pg279 check for crucifix or stake
+31 multicombat and add luck
+32 check for CHEESE pg 287
+33 check for BLUE_CANDLE pg 292
+34 choose what to add pg 313
+35 pg317 add CHEESE
+36 pg 325 add Helmet
+37 choose to add book stick and gold then provisions pg327
+38 pg328 replace item with wood
+39 enhanced combat pg333
+40 buy candle
+41 check items
+42 add sword input2 pg 344
+43 gold gamble test lucuk pg 346
+44 check for potion of invisiblilty
+45 pg350 piranhas enhcombat
+46 pg361 add key
+47 enhcombat pg 394
+
+ADD item:
+pg27 Sword2
+pg50 Key9
+pg132 wood shield
+pg145 key99
+pg273 Stakes 5
+pg313 silver crucifix
+pg317 cheese 7
+pg325 ADD +1 HELMET
+pg344 ADD +1 sword
+pg 170 ADD silver crucifix
+pg 328 ADD Y shaped Sticks
+pg203 Boathouse-Key
+
+1-12
+
+13
+Add TWO items
+pg201 Invisibility potion, glove
+
+14
+ADD TWO items then provisions
+pg 75 Jewel, key111
+
+ADD item then provisions
+pg 258 Key111
+pg266 Bow silver arrow
+pg327 BOOK
+15-17
+Add item encounters - 1-17
+
+
+CHECK equipment
+pg 264 CHECK for boathouse key 1
+pg 279 CHECK for crucifix or Stakes 2
+pg 287 CHECK for CHEESE 3
+pg 292 CHECK for Blue Candle 4
+pg 348 CHECK for potion of invis 5
+
+CHECK multiple equipment
+pg 105 CHECK equpment 6
+pg 211 CHECK silver weapons 7
+
+BUY
+pg 334 BUY blue candle
+21
+
+Exchange equipment
+pg34 EXCHANGE mallet and silver chisel
+pg 155 EXCHANGE for SHIELD (shield rules)
+18 and 19
+
+
+REMOVE specific
+pg 32 REMOVE CHEESE
+
+SACRIFICE ITEM
+sacrifice item pg 119

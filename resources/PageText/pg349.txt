@@ -1,0 +1,4 @@
+You walk a few metres down the passage and find
+yourself at a dead end. You may either return to the
+crossroads (1) or investigate the end of the
+passage (2).

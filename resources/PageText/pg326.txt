@@ -1,0 +1,5 @@
+You enter a small room with bare, rocky walls. On
+the far wall hangs a golden key. There appears to be
+no way through the room. Do you want to go for the
+key (1) or leave it and return to the junction
+(2)?

@@ -1,0 +1,12 @@
+The passageway ends in a door at which you listen
+but hear nothing. Trying the handle, you find that
+the door opens to reveal a large, square room. The
+room is completely bare, but the floor is covered in a
+mosaic of tiles. Two shapes stand out on the floor;
+star-shaped tiles and hand-shaped tiles. A door on
+the opposite wall is the only way through. Will you:
+Walk across the room to the door? (1)
+Walk across the room stepping
+only on stars? (2)
+Walk across the room stepping
+only on hands? (3)

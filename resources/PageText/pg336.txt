@@ -1,0 +1,19 @@
+You are in a small, foul-smelling room. You notice
+two doors: one to the west and one behind you to
+the south. The furniture in the room is sparse and
+has been made mostly from bits of old boats. There
+appears to be nothing of value in the room, but a
+bunch of keys hangs on the wall. An old man in
+ragged clothes is slumped asleep on a ‘bench’ made
+from half a rowing boat, snoring loudly. Next to him
+is a vicious-looking brown dog with red eyes and
+black teeth, whom you have awakened and who
+now is eyeing you suspiciously. A deep growl is
+coming from its throat. You may:
+Tiptoe an exit through the south
+door (1)
+Bang on the door behind you and
+cough a few ‘Ahem’s’ to wake up
+the old man (2).
+Leap across the room with sword
+drawn to cut down the dog (3).

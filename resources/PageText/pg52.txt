@@ -1,0 +1,9 @@
+You are standing at a T-junction where a passage to
+the east comes off a north-south corridor.
+To go south (1).
+To check for secret passages
+on the way southwards (2).
+To go north (3).
+To check for secret passages
+on the way northwards (4).
+To go east (5).

@@ -1,0 +1,2 @@
+You are in a north-south passageway. To go north,
+turn to (1). To go south, (2).

@@ -1,0 +1,5 @@
+The door opens into a passage which you follow
+northwards. Shortly you reach a bend and follow it
+round to the east. Several metres on, you reach a
+junction at which you may either go north (1) or
+continue eastwards (2).

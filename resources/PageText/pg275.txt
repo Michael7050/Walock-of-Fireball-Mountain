@@ -1,0 +1,7 @@
+As you move over towards the second body, you
+accidentally kick the third corpse on the floor. Its
+eyes flick open and it quickly sits up and slashes at
+you with its long, sharp fingernails.
+Test your Luck. If you are Lucky, the creature misses.
+if you are Unlucky, it has caught you across the leg
+and you suffer 1 STAM1NA point’s worth of damage.

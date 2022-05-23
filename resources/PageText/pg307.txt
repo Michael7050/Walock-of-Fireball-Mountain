@@ -1,0 +1,4 @@
+The passage twists and turns and eventually ends in
+a solid iron door. You listen but hear nothing. You
+can try to open the door (1) or you can go
+back to the junction (2).

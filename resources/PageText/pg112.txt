@@ -1,0 +1,6 @@
+You see nothing in the room likely to help you in
+your battle. Will you:
+Draw your sword, grit your teeth
+and advance? (1)
+Search your rucksack for a weapon
+to use? (2)

@@ -1,0 +1,12 @@
+The narrow staircase is cut into the rock and there
+are about twenty steps leading down. At the bottom
+of the steps a passageway leads you into a large
+open chamber. This chamber stinks of putrefying
+flesh. The smell is so bad that you are tempted to
+turn back. Three bodies lie in the chamber. You may
+either search the bodies, or tiptoe quietly through
+the room. What will you do:
+Search the first body? (1)
+Search the second body? (2)
+Search the third body? (3)
+Tiptoe through the room? (4)

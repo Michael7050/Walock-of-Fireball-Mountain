@@ -1,0 +1,5 @@
+As you walk along the corridor, you can see ahead
+that it is getting narrower. At one point you stoop,
+and as you do so, a deep, resonating laugh starts up
+around you. Do you wish to continue? If so, (1).
+If you wish to turn back, (2).

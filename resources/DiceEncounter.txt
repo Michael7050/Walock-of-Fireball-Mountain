@@ -1,0 +1,9 @@
+1 pg47 dice
+2 pg123 dice
+3 pg156 dice
+4 pg166 dice
+5 pg195 dice
+6 pg 209 dice
+7 pg 298 dice
+8 pg316 dice vs stam then provisions
+9 pg 339 dice damage then check alive

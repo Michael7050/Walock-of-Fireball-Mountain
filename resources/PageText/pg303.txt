@@ -1,0 +1,9 @@
+You arrive at the end of the passage, where it meets
+another going east-west. But an iron portcullis
+blocks your way and no amount of charging is going
+to budge it. On the wall to your right are two levers
+and it seems likely that these levers have something
+to do with raising the portcullis. Do you wish to pull
+the right lever or the left lever?
+Right (1).
+Left (2).

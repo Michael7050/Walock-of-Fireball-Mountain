@@ -1,0 +1,4 @@
+The passageway ahead runs northwards and you
+follow this until you reach another junction. Here
+you may either continue northwards (1) or
+you may turn westwards (2).

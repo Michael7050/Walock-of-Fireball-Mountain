@@ -1,0 +1,15 @@
+The luck of the cards may or may not be with you.
+You have two choices.
+You may leave all luck to the cards. (1) Throw two dice.
+If the number is even, then you lose this number of
+Gold Pieces or all your Gold if you don’t have
+enough. If the number is odd, then you win this
+number of Gold Pieces.
+Alternatively, you may use your LUCK to help you
+win. (2) Test your Luck. If you are Lucky, throw two dice
+to see how many Gold Pieces you win. If you are
+Unlucky, throw two dice to see how many Gold
+Pieces you lose.
+Make the appropriate alterations on your Adventure
+Sheet. lf you won, you may add 2 LUCK points for
+your good fortune.

@@ -1,0 +1,8 @@
+The old man does not look up from the table, but his
+devilish little pet eyes you suspiciously and starts
+chattering in a small squeaky voice. The old man
+grunts and asks you whether you are game for a
+wager. Will you accept (you may only do so if you
+have at least one Gold Piece with you)? (1)
+If not, you may either leave the room (2) or
+attack the man (3).

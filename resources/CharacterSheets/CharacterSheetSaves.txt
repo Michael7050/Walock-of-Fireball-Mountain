@@ -1,0 +1,5 @@
+Harrison 22 8 0 1 10 12 12 9 22 999 2 0 0 resources/CharacterSheets/HarrisonInventory.txt 
+Blake 19 10 0 12 10 11 19 1 10 278 0 0 2 resources/CharacterSheets/BlakeInventory.txt 
+Michael 19 9 0 10 12 11 9 19 2 207 2 0 0 resources/CharacterSheets/MichaelInventory.txt 
+Shayna 18 9 0 8 8 9 18 1 10 301 2 0 0 resources/CharacterSheets/ShaynaInventory.txt 
+Jim 16 12 0 12 16 8 1 10 9 278 0 0 2 resources/CharacterSheets/JimInventory.txt 
