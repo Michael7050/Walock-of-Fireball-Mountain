@@ -25,7 +25,8 @@ public class GameMethods
     {
         Random rng = new Random();
         int rollD6 = rng.nextInt(6) + 1;
-        System.out.println("You rolled a dice and got: " + rollD6);
+        //System.out.println("You rolled a dice and got: " + rollD6);
+        GameFrame.writeToScreen("You rolled a dice and got: " + rollD6);
         return rollD6;
     }
 
@@ -40,7 +41,8 @@ public class GameMethods
         boolean isNumber = false;
         while (true)
         {
-            System.out.println("Enter your response as a number between 1 and " + parameter +":");
+            //System.out.println("Enter your response as a number between 1 and " + parameter +":");
+            GameFrame.writeToScreen("Enter your response as a number between 1 and " + parameter +":");
             while (true)
             {
                 try
@@ -49,7 +51,8 @@ public class GameMethods
                     break;
                 } catch (InputMismatchException e)
                 {
-                    System.out.println("This needs to be a number.");
+                    //System.out.println("This needs to be a number.");
+                    GameFrame.writeToScreen("This needs to be a number.");
                     scan.nextLine();
                 }
             }
@@ -59,7 +62,8 @@ public class GameMethods
                 return input;
             }
 
-            System.out.println("Not a valid option! Please enter a number between 0 and " + parameter + ".");
+            //System.out.println("Not a valid option! Please enter a number between 0 and " + parameter + ".");
+            GameFrame.writeToScreen("Not a valid option! Please enter a number between 0 and " + parameter + ".");
         }
     }
 
@@ -89,7 +93,8 @@ public class GameMethods
             }
             else
             {
-                System.out.println("Sorry, I didn't catch that. Please answer y/n");
+                //System.out.println("Sorry, I didn't catch that. Please answer y/n");
+                GameFrame.writeToScreen("Sorry, I didn't catch that. Please answer y/n");
             }
         }
         return answer;

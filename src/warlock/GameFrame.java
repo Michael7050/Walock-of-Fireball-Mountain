@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author Michael Jones
  */
 public class GameFrame extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form GameFrame
@@ -121,10 +122,9 @@ public class GameFrame extends javax.swing.JFrame {
         else
         {
         String input = playerInput.getText();
+        playerInput.setText(null);
+        getInput(input);
         }
-        
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -175,6 +175,12 @@ public class GameFrame extends javax.swing.JFrame {
     public static void writeToScreen(String... strings) {
         for (String s : strings) {
             gameOutput.append(s + "\n");
+            gameOutput.setCaretPosition(gameOutput.getDocument().getLength());
         }
+    }
+    
+    public static String getInput(String input)
+    {
+        return input;
     }
 }

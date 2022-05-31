@@ -663,11 +663,16 @@ public class RunPage {
         Scanner scanner = new Scanner(System.in);
         Boolean x = true;
         while (x) {
-            System.out.println("Press C to view current character sheet,");
-            System.out.println("I to view Inventory and drink potions,");
-            System.out.println("H for help");
-            System.out.println("X to save and exit");
-            System.out.println("or anything else to continue.");
+            //System.out.println("Press C to view current character sheet,");
+            GameFrame.writeToScreen("Press C to view current character sheet,");
+            //System.out.println("I to view Inventory and drink potions,");
+            GameFrame.writeToScreen("I to view Inventory and drink potions,");
+            //System.out.println("H for help");
+            GameFrame.writeToScreen("H for help");
+            //System.out.println("X to save and exit");
+            GameFrame.writeToScreen("X to save and exit");
+            //System.out.println("or anything else to continue.");
+            GameFrame.writeToScreen("or anything else to continue.");
             String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("c")) {
                 player.printCharSheet();
@@ -679,11 +684,13 @@ public class RunPage {
             }
             else if (answer.equalsIgnoreCase("h"))
             {
-                System.out.print(FileMethods.readText("resources/PageText/help.txt")); //put help page.
+                //System.out.print(FileMethods.readText("resources/PageText/help.txt")); //put help page.
+                GameFrame.writeToScreen(FileMethods.readText("resources/PageText/help.txt"));
             }
             else if (answer.equalsIgnoreCase("x"))
             {
-                System.out.println("Saving current progress, and closing game.");
+                //System.out.println("Saving current progress, and closing game.");
+                GameFrame.writeToScreen("Saving current progress, and closing game.");
                 System.exit(0);
             }
             else {
@@ -701,14 +708,17 @@ public class RunPage {
             case 1:
                 if (player.getLuckPot() > 0)
                 {
-                    System.out.println("You currently have " + player.getLuckPot() + " sips of luck potion left.");
-                    System.out.println("Do you take a sip now? (Y/N)");
+                    //System.out.println("You currently have " + player.getLuckPot() + " sips of luck potion left.");
+                    GameFrame.writeToScreen("You currently have " + player.getLuckPot() + " sips of luck potion left.");
+                    //System.out.println("Do you take a sip now? (Y/N)");
+                    GameFrame.writeToScreen("Do you take a sip now? (Y/N)");
                     drink = GameMethods.yn();
                     if (drink)
                     {
                         player.setInitialLuck(player.getInitialLuck() + 1);
                         player.setLuck(player.getInitialLuck());
-                        System.out.println("You feel lucky! Current luck: " + player.getLuck());
+                        //System.out.println("You feel lucky! Current luck: " + player.getLuck());
+                        GameFrame.writeToScreen("You feel lucky! Current luck: " + player.getLuck());
                         player.setLuckPot((player.getLuckPot()-1));
                         return;
                     }
@@ -719,20 +729,24 @@ public class RunPage {
                 }
                 else
                 {
-                    System.out.println("You have no potions left.");
+                    //System.out.println("You have no potions left.");
+                    GameFrame.writeToScreen("You have no potions left.");
                     return;
                 }
 
             case 2:
                 if (player.getStaminaPot() > 0)
                 {
-                    System.out.println("You currently have " + player.getStaminaPot() + " sips of stamina potion left.");
-                    System.out.println("Do you take a sip now? (Y/N)");
+                    //System.out.println("You currently have " + player.getStaminaPot() + " sips of stamina potion left.");
+                    GameFrame.writeToScreen("You currently have " + player.getStaminaPot() + " sips of stamina potion left.");
+                    //System.out.println("Do you take a sip now? (Y/N)");
+                    GameFrame.writeToScreen("Do you take a sip now? (Y/N)");
                     drink = GameMethods.yn();
                     if (drink)
                     {
                         player.setStamina(player.getInitialStamina());
-                        System.out.println("You feel Healthy! Current Stamina: " + player.getStamina());
+                        //System.out.println("You feel Healthy! Current Stamina: " + player.getStamina());
+                        GameFrame.writeToScreen("You feel Healthy! Current Stamina: " + player.getStamina());
                         player.setStaminaPot((player.getStaminaPot()-1));
                         return;
                     }
@@ -743,19 +757,23 @@ public class RunPage {
                 }
                 else
                 {
-                    System.out.println("You have no potions left.");
+                    //System.out.println("You have no potions left.");
+                    GameFrame.writeToScreen("You have no potions left.");
                     return;
                 }
             case 3:
                 if (player.getSkillPot() > 0)
                 {
-                    System.out.println("You currently have " + player.getSkillPot() + " sips of skill potion left.");
-                    System.out.println("Do you take a sip now? (Y/N)");
+                    //System.out.println("You currently have " + player.getSkillPot() + " sips of skill potion left.");
+                    GameFrame.writeToScreen("You currently have " + player.getSkillPot() + " sips of skill potion left.");
+                    //System.out.println("Do you take a sip now? (Y/N)");
+                    GameFrame.writeToScreen("Do you take a sip now? (Y/N)");
                     drink = GameMethods.yn();
                     if (drink)
                     {
                         player.setSkill(player.getInitialSkill());
-                        System.out.println("You feel Skillful! Current Skill: " + player.getSkill());
+                        //System.out.println("You feel Skillful! Current Skill: " + player.getSkill());
+                        GameFrame.writeToScreen("You feel Skillful! Current Skill: " + player.getSkill());
                         player.setSkillPot((player.getSkillPot()-1));
                         return;
                     }
@@ -766,7 +784,8 @@ public class RunPage {
                 }
                 else
                 {
-                    System.out.println("You have no potions left.");
+                    //System.out.println("You have no potions left.");
+                    GameFrame.writeToScreen("You have no potions left.");
                     return;
                 }
         }

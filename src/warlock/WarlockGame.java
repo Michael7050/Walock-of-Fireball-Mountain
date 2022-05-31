@@ -28,7 +28,7 @@ public class WarlockGame
         this.savedGames = new HashMap<>();
         this.getPlayers(fileName);
         //Game Startup Text
-        System.out.println(FileMethods.readText("resources/PageText/gamestart.txt"));
+        //System.out.println(FileMethods.readText("resources/PageText/gamestart.txt"));
         GameFrame.writeToScreen(FileMethods.readText("resources/PageText/gamestart.txt"));
         //load or create char sheet
         CharacterSheet player = checkPlayer(startSaves());
@@ -74,7 +74,8 @@ public class WarlockGame
         if (this.savedGames.containsKey(name))
         {
             player = this.savedGames.get(name);
-            System.out.println("Your current page: " + player.getPagenum());
+            //System.out.println("Your current page: " + player.getPagenum());
+            GameFrame.writeToScreen("Your current page: " + player.getPagenum());
         }
         else
         {
@@ -107,9 +108,13 @@ public class WarlockGame
     public String startSaves()
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Current saved games:");
-        System.out.println(savedGames.keySet());
-        System.out.println("Enter player name to load game, or start new game:");
+        //System.out.println("Current saved games:");
+        GameFrame.writeToScreen("Current saved games:");
+        //System.out.println(savedGames.keySet());
+        String[] svGame = savedGames.keySet().toArray(new String[0]);
+        GameFrame.writeToScreen(svGame);
+        //System.out.println("Enter player name to load game, or start new game:");
+        GameFrame.writeToScreen("Enter player name to either load game, or start new game:");
         String input = scan.nextLine();
         return input;
     }

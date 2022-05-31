@@ -65,8 +65,10 @@ public class Encounter
     public static boolean run161(CharacterSheet player) throws InterruptedException
     {
         int diceRoll = GameMethods.rollD6() + 13;
-        System.out.println(FileMethods.readText(FileMethods.getPagePath(161)));
-        System.out.println("You rolled a: " + diceRoll);
+        //System.out.println(FileMethods.readText(FileMethods.getPagePath(161)));
+        GameFrame.writeToScreen(FileMethods.readText(FileMethods.getPagePath(161)));
+        //System.out.println("You rolled a: " + diceRoll);
+        GameFrame.writeToScreen("You rolled a: " + diceRoll);
         boolean result = singleMonsterEncounter(diceRoll, player);
         return result;
     }
@@ -86,7 +88,8 @@ public class Encounter
         boolean run;
 
         //Start combat encounter
-        System.out.println("COMBAT ENCOUNTER!\n" + playerName + " Vs. " + monsterName + "!\n\n");
+        //System.out.println("COMBAT ENCOUNTER!\n" + playerName + " Vs. " + monsterName + "!\n\n");
+        GameFrame.writeToScreen("COMBAT ENCOUNTER!\n" + playerName + " Vs. " + monsterName + "!\n\n");
 
         //put loop or something here
         while (inCombat)
@@ -98,7 +101,8 @@ public class Encounter
             if (monsterAtk < playerAtk)
             {
                 //result for if player wins roll
-                System.out.println("You wounded " + monsterName + ", and dealt two damage!\n");
+                //System.out.println("You wounded " + monsterName + ", and dealt two damage!\n");
+                GameFrame.writeToScreen("You wounded " + monsterName + ", and dealt two damage!\n");
                 //choose whether or not to use luck
                 boolean luck = chooseLuck(player);
                 if (luck)
@@ -107,12 +111,14 @@ public class Encounter
                     boolean luckResult = testLuck(player);
                     if (luckResult)
                     {
-                        System.out.println("You have inflicted a *severe wound!*\n Two more damage dealt to " + monsterName + ".");
+                        //System.out.println("You have inflicted a *severe wound!*\n Two more damage dealt to " + monsterName + ".");
+                        GameFrame.writeToScreen("You have inflicted a *severe wound!*\n Two more damage dealt to " + monsterName + ".");
                         monsterHP -= 4;
                     }
                     else
                     {
-                        System.out.println("The wound was a mere graze! You only dealt one damage to " + monsterName + " after all!");
+                        //System.out.println("The wound was a mere graze! You only dealt one damage to " + monsterName + " after all!");
+                        GameFrame.writeToScreen("The wound was a mere graze! You only dealt one damage to " + monsterName + " after all!");
                         monsterHP -= 1;
                     }
                 }
@@ -124,7 +130,8 @@ public class Encounter
             //result for losing round
             else if (playerAtk < monsterAtk)
             {
-                System.out.println(monsterName + " wounded you, dealing two damage!");
+                //System.out.println(monsterName + " wounded you, dealing two damage!");
+                GameFrame.writeToScreen(monsterName + " wounded you, dealing two damage!");
                 //wound for two and choose whether or not to use luck.
                 boolean luck = chooseLuck(player);
                 if (luck)
@@ -132,12 +139,14 @@ public class Encounter
                     boolean luckResult = testLuck(player);
                     if (luckResult)
                     {
-                        System.out.println("You managed to avoid the full damage of the blow!\n You only took one damage after all.");
+                        //System.out.println("You managed to avoid the full damage of the blow!\n You only took one damage after all.");
+                        GameFrame.writeToScreen("You managed to avoid the full damage of the blow!\n You only took one damage after all.");
                         playerHP -= 1;
                     }
                     else
                     {
-                        System.out.println("You took a more serious blow than you expected!\n Three damage taken instead.");
+                        //System.out.println("You took a more serious blow than you expected!\n Three damage taken instead.");
+                        GameFrame.writeToScreen("You took a more serious blow than you expected!\n Three damage taken instead.");
                         playerHP -= 3;
                     }
                 }
@@ -146,12 +155,15 @@ public class Encounter
 
             else if (playerAtk == monsterAtk)
             {
-                System.out.println("A tie! You avoid each other's blows. Next round!");
+                //System.out.println("A tie! You avoid each other's blows. Next round!");
+                GameFrame.writeToScreen("A tie! You avoid each other's blows. Next round!");
             }
 
             roundNum += 1;
-            System.out.println("End of round " + roundNum + ".");
-            System.out.println("Your Stamina: " + playerHP + ". " + monsterName + "'s Stamina: " + monsterHP);
+            //System.out.println("End of round " + roundNum + ".");
+            GameFrame.writeToScreen("End of round " + roundNum + ".");
+            //System.out.println("Your Stamina: " + playerHP + ". " + monsterName + "'s Stamina: " + monsterHP);
+            GameFrame.writeToScreen("Your Stamina: " + playerHP + ". " + monsterName + "'s Stamina: " + monsterHP);
             player.setStamina(playerHP);
             checkPlayerDeath(player, monsterName); //checks if player has died.
 
@@ -167,8 +179,10 @@ public class Encounter
 
             if (monsterHP <= 0)
             {
-                System.out.println(playerName + " has defeated " + monsterName + " in glorious combat!");
-                System.out.println("Your final Stamina: " + playerHP);
+                //System.out.println(playerName + " has defeated " + monsterName + " in glorious combat!");
+                GameFrame.writeToScreen(playerName + " has defeated " + monsterName + " in glorious combat!");
+                //System.out.println("Your final Stamina: " + playerHP);
+                GameFrame.writeToScreen("Your final Stamina: " + playerHP);
                 player.setStamina(playerHP);
                 return true;
             }
@@ -188,7 +202,8 @@ public class Encounter
         dice1 = GameMethods.rollD6();
         dice2 = GameMethods.rollD6();
         totalAtk = (dice1 + dice2 + skill);
-        System.out.println(name + "'s skill is " + skill + " and " + name + " rolls " + dice1 + " plus " + dice2 + ".\nTotal Attack: " + totalAtk + "\n\n");
+        //System.out.println(name + "'s skill is " + skill + " and " + name + " rolls " + dice1 + " plus " + dice2 + ".\nTotal Attack: " + totalAtk + "\n\n");
+        GameFrame.writeToScreen(name + "'s skill is " + skill + " and " + name + " rolls " + dice1 + " plus " + dice2 + ".\nTotal Attack: " + totalAtk + "\n\n");
         sleep(1000);
         return totalAtk;
     }
@@ -203,7 +218,8 @@ public class Encounter
             //make sure that player has luck before asking.
             return false;
         }
-        System.out.println("Do you choose to press your luck? Y/N");
+        //System.out.println("Do you choose to press your luck? Y/N");
+        GameFrame.writeToScreen("Do you choose to press your luck? Y/N");
         boolean answer = GameMethods.yn();
         return answer;
     }
@@ -218,36 +234,46 @@ public class Encounter
         int dice1 = GameMethods.rollD6();
         int dice2 = GameMethods.rollD6();
         int luckResult = dice1 + dice2;
-        System.out.println("*You test your luck!*");
+        //System.out.println("*You test your luck!*");
+        GameFrame.writeToScreen("*You test your luck!*");
         sleep(1000);
-        System.out.println("Rolling the dice...:");
+        //System.out.println("Rolling the dice...:");
+        GameFrame.writeToScreen("Rolling the dice...:");
         sleep(1000);
-        System.out.println("Dice 1. . .");
+        //System.out.println("Dice 1. . .");
+        GameFrame.writeToScreen("Dice 1. . .");
         sleep(1000);
-        System.out.println(dice1);
+        //System.out.println(dice1);
+        GameFrame.writeToScreen(String.valueOf(dice1));
         sleep(1000);
-        System.out.println("Dice 2. . .");
+        //System.out.println("Dice 2. . .");
+        GameFrame.writeToScreen("Dice 2. . .");
         sleep(1000);
-        System.out.println(dice2);
+        //System.out.println(dice2);
+        GameFrame.writeToScreen(String.valueOf(dice2));
         sleep(1000);
-        System.out.println(name + "'s luck is " + luck + " and " + name + " rolled a total of " + luckResult + "\n\n");
+        //System.out.println(name + "'s luck is " + luck + " and " + name + " rolled a total of " + luckResult + "\n\n");
+        GameFrame.writeToScreen(name + "'s luck is " + luck + " and " + name + " rolled a total of " + luckResult + "\n\n");
 
         if (luckResult <= luck)
         {
             lucky = true;
             luck -= 1;
             player.setLuck(luck);
-            System.out.println("Congratulations! You feel lucky!\n One luck point spent.");
+            //System.out.println("Congratulations! You feel lucky!\n One luck point spent.");
+            GameFrame.writeToScreen("Congratulations! You feel lucky!\n One luck point spent.");
         }
         else
         {
             lucky = false;
             luck -= 1;
             player.setLuck(luck);
-            System.out.println("Unfortunate! You feel unlucky!\n One luck point spent.");
+            //System.out.println("Unfortunate! You feel unlucky!\n One luck point spent.");
+            GameFrame.writeToScreen("Unfortunate! You feel unlucky!\n One luck point spent.");
 
         }
-        System.out.println("Current luck: " + player.getLuck());
+        //System.out.println("Current luck: " + player.getLuck());
+        GameFrame.writeToScreen("Current luck: " + player.getLuck());
         return lucky;
     }
 
@@ -255,21 +281,26 @@ public class Encounter
     public static boolean escapeMethod(CharacterSheet player)
     {
         int playerHP = player.getStamina();
-        System.out.println("You see a chance to escape! But be warned, you will get hit if you choose to run.");
-        System.out.println("Do you choose to run? Y/N");
+        //System.out.println("You see a chance to escape! But be warned, you will get hit if you choose to run.");
+        GameFrame.writeToScreen("You see a chance to escape! But be warned, you will get hit if you choose to run.");
+        //System.out.println("Do you choose to run? Y/N");
+        GameFrame.writeToScreen("Do you choose to run? Y/N");
         boolean answer = GameMethods.yn();
         if (answer)
         {
             playerHP -= 2;
-            System.out.println("When danger reared it's ugly head, you bravely turned your tail and fled.");
-            System.out.println("Current Stamina: " + playerHP);
+            //System.out.println("When danger reared it's ugly head, you bravely turned your tail and fled.");
+            GameFrame.writeToScreen("When danger reared it's ugly head, you bravely turned your tail and fled.");
+            //System.out.println("Current Stamina: " + playerHP);
+            GameFrame.writeToScreen("Current Stamina: " + playerHP);
             player.setStamina(playerHP);
             checkPlayerDeath(player, "running away like a coward");
             return false;
         }
         else
         {
-            System.out.println("You bravely charge into the fray!");
+            //System.out.println("You bravely charge into the fray!");
+            GameFrame.writeToScreen("You bravely charge into the fray!");
             return true;
         }
     }
@@ -290,9 +321,12 @@ public class Encounter
 
     public static void runDeath(CharacterSheet player, String death) //player dies
     {
-        System.out.println("Oh dear, you are dead.");
-        System.out.println("You made it to page: " + player.getPagenum() + " and died because of " + death + ".");
-        System.out.println("Better luck next time!");
+        //System.out.println("Oh dear, you are dead.");
+        GameFrame.writeToScreen("Oh dear, you are dead.");
+        //System.out.println("You made it to page: " + player.getPagenum() + " and died because of " + death + ".");
+        GameFrame.writeToScreen("You made it to page: " + player.getPagenum() + " and died because of " + death + ".");
+        //System.out.println("Better luck next time!");
+        GameFrame.writeToScreen("Better luck next time!");
         System.exit(0);
     }
 
@@ -301,25 +335,29 @@ public class Encounter
     {
         boolean result = false;
         loadInventory(player);
-        System.out.println("You can buy an item here, will you?");
+        //System.out.println("You can buy an item here, will you?");
+        GameFrame.writeToScreen("You can buy an item here, will you?");
         boolean response = GameMethods.yn();
         if (response)
         {
             if (player.getGold() < cost)
             {
-                System.out.println("You don't have enough money!");
+                //System.out.println("You don't have enough money!");
+                GameFrame.writeToScreen("You don't have enough money!");
             }
             else
             {
                 GameMethods.changeGold(player, (-cost));
                 addItem(characterInventory, itemNum);
-                System.out.println("Paid " + cost + " gold for: " + FileMethods.getInventoryItem(itemNum) + "!");
+                //System.out.println("Paid " + cost + " gold for: " + FileMethods.getInventoryItem(itemNum) + "!");
+                GameFrame.writeToScreen("Paid " + cost + " gold for: " + FileMethods.getInventoryItem(itemNum) + "!");
                 result = true;
             }
         }
         else
         {
-            System.out.println("You decide not to buy the item.");
+            //System.out.println("You decide not to buy the item.");
+            GameFrame.writeToScreen("You decide not to buy the item.");
         }
         saveInventory(player);
     }
@@ -334,7 +372,8 @@ public class Encounter
         }
         else
         {
-            System.out.println("Item not found in inventory!");
+            //System.out.println("Item not found in inventory!");
+            GameFrame.writeToScreen("Item not found in inventory!");
         }
         saveInventory(player);
     }
@@ -344,7 +383,8 @@ public class Encounter
         loadInventory(player);
         if (characterInventory.size() < 0)
         {
-            System.out.println("You don't have any items to sacrifice, so you throw a gold instead.");
+            //System.out.println("You don't have any items to sacrifice, so you throw a gold instead.");
+            GameFrame.writeToScreen("You don't have any items to sacrifice, so you throw a gold instead.");
             GameMethods.changeGold(player,-1);
         }
         else
@@ -392,7 +432,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You do not have a crucifix! Try a different option!");
+                                //System.out.println("You do not have a crucifix! Try a different option!");
+                                GameFrame.writeToScreen("You do not have a crucifix! Try a different option!");
                                 break;
                             }
                         case 2:
@@ -406,7 +447,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You do not have any stakes! Try a different option!");
+                                //System.out.println("You do not have any stakes! Try a different option!");
+                                GameFrame.writeToScreen("You do not have any stakes! Try a different option!");
                                 break;
                             }
                         }
@@ -446,7 +488,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You don't have an Invisibility Potion! Try a different option.");
+                                //System.out.println("You don't have an Invisibility Potion! Try a different option.");
+                                GameFrame.writeToScreen("You don't have an Invisibility Potion! Try a different option.");
                                 break;
                             }
                         case 2: //check for Eye of cyclops
@@ -459,7 +502,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You don't have the Jewel! Try a different option.");
+                                //System.out.println("You don't have the Jewel! Try a different option.");
+                                GameFrame.writeToScreen("You don't have the Jewel! Try a different option.");
                                 break;
                             }
                         }
@@ -473,7 +517,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You don't have any Cheese! Try a different option.");
+                                //System.out.println("You don't have any Cheese! Try a different option.");
+                                GameFrame.writeToScreen("You don't have any Cheese! Try a different option.");
                                 break;
                             }
                         }
@@ -487,7 +532,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You don't have the bow! Try a different option.");
+                                //System.out.println("You don't have the bow! Try a different option.");
+                                GameFrame.writeToScreen("You don't have the bow! Try a different option.");
                                 break;
                             }
                         }
@@ -501,7 +547,8 @@ public class Encounter
                             }
                             else
                             {
-                                System.out.println("You don't have any sticks! Try a different option.");
+                                //System.out.println("You don't have any sticks! Try a different option.");
+                                GameFrame.writeToScreen("You don't have any sticks! Try a different option.");
                                 break;
                             }
                         }
@@ -554,14 +601,16 @@ public class Encounter
     {
         boolean result = false;
         loadInventory(player);
-        System.out.println("Do you wish to sacrifice an item to pick up a new one?");
+        //System.out.println("Do you wish to sacrifice an item to pick up a new one?");
+        GameFrame.writeToScreen("Do you wish to sacrifice an item to pick up a new one?");
         Boolean answer = GameMethods.yn();
         if (answer)
         {
             listInventory();
             if (characterInventory.size() < 0)
             {
-                System.out.println("You don't have any items to sacrifice!");
+                //System.out.println("You don't have any items to sacrifice!");
+                GameFrame.writeToScreen("You don't have any items to sacrifice!");
             }
             else
             {
@@ -573,7 +622,8 @@ public class Encounter
         }
         else
         {
-            System.out.println("You decided not to give up any of your stuff.");
+            //System.out.println("You decided not to give up any of your stuff.");
+            GameFrame.writeToScreen("You decided not to give up any of your stuff.");
         }
         saveInventory(player);
     }
@@ -649,27 +699,32 @@ public class Encounter
 
     public static void listInventory()
     {
-        System.out.println("Current Inventory");
+        //System.out.println("Current Inventory");
+        GameFrame.writeToScreen("Current Inventory");
         for (int i = 0; i < characterInventory.size(); i++)
         {
-            System.out.println((i + 1) + ": " + characterInventory.get(i));
+            //System.out.println((i + 1) + ": " + characterInventory.get(i));
+            GameFrame.writeToScreen((i + 1) + ": " + characterInventory.get(i));
         }
     }
 
     public static void listCurrentInventory(CharacterSheet player) throws IOException
     {
         loadInventory(player);
-        System.out.println("Current Inventory");
+        //System.out.println("Current Inventory");
+        GameFrame.writeToScreen("Current Inventory");
         for (int i = 0; i < characterInventory.size(); i++)
         {
-            System.out.println((i + 1) + ": " + characterInventory.get(i));
+            //System.out.println((i + 1) + ": " + characterInventory.get(i));
+            GameFrame.writeToScreen((i + 1) + ": " + characterInventory.get(i));
         }
         saveInventory(player);
     }
 
     public static int chooseItem()
     {
-        System.out.println("Select item:");
+        //System.out.println("Select item:");
+        GameFrame.writeToScreen("Select item:");
         int response = GameMethods.takeInput(characterInventory.size());
         return (response - 1);
     }
