@@ -1,7 +1,6 @@
 package warlock;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class RunPage {
@@ -16,13 +15,16 @@ public class RunPage {
         int roll;
 
         //page start:
-        System.out.println("Page:" + startPage);
+        //System.out.println("Page:" + startPage);
+        GameFrame.writeToScreen("Page:" + startPage);
 
         //read gamedata from file and create array of data
         Page page = generatePage(startPage);
         endOfPage(player, destination);//run end of page which should now be called start of page.
         //print pagetext
-        System.out.println(FileMethods.readText(FileMethods.getPagePath(page.pgnum)));
+        //System.out.println(FileMethods.readText(FileMethods.getPagePath(page.pgnum)));
+        GameFrame.writeToScreen((FileMethods.readText(FileMethods.getPagePath(page.pgnum))));
+
 
         destination = page.dest1; //sets a default value if input method fails
 
@@ -49,7 +51,8 @@ public class RunPage {
                     int gold = player.getGold();
                     if (gold < 3)
                     {
-                        System.out.println("You don't have enough gold! You threaten him instead.");
+                        //System.out.println("You don't have enough gold! You threaten him instead.");
+                        GameFrame.writeToScreen("You don't have enough gold! You threaten him instead.");
                         destination = page.dest2;
                     }
                     else
@@ -158,7 +161,8 @@ public class RunPage {
 
                     case 5: //pg 213
                         roll = GameMethods.rollD6() + GameMethods.rollD6();
-                        System.out.println("You rolled: " + roll + " and your skill is " + player.getSkill() +".");
+                        //System.out.println("You rolled: " + roll + " and your skill is " + player.getSkill() +".");
+                        GameFrame.writeToScreen("You rolled: " + roll + " and your skill is " + player.getSkill() +".");
                         if (roll <= player.getSkill())
                         {
                             destination = page.dest1;
@@ -374,7 +378,8 @@ public class RunPage {
 
             case 21: //luckandskill page 55
                 int dice = (GameMethods.rollD6() + GameMethods.rollD6());
-                System.out.println("You rolled a total of: " + dice);
+                //System.out.println("You rolled a total of: " + dice);
+                GameFrame.writeToScreen("You rolled a total of: " + dice);
                 if ((dice <= player.getLuck()) && (dice <= player.getStamina()))
                 {
                     destination = page.dest1;
@@ -496,8 +501,12 @@ public class RunPage {
                 break;
             case 35: //win
                 GameMethods.enterToContinue();
-                System.out.println("Congratulations! You WIN!");
-                System.out.println("Game shutting down now.");
+                //System.out.println("Congratulations! You WIN!");
+                GameFrame.writeToScreen("Congratulations! You WIN!");
+                //System.out.println("Game shutting down now, press enter.");
+                GameFrame.writeToScreen("Game shutting down now, press enter.");
+
+                GameMethods.enterToContinue();
                 System.exit(0);
                 break;
 
@@ -609,12 +618,13 @@ public class RunPage {
         return dest;
     }
 
-    public static void eatProvisions (CharacterSheet player) {
+    public static void eatProvisions(CharacterSheet player) {
         int playerProvisions = player.getProvisions();
         int playerHP = player.getStamina();
         if (playerProvisions > 0) //checks to see if player has provisions
         {
-            System.out.println("You can eat some provisions here. Will you? Y/N"); //check for input
+            //System.out.println("You can eat some provisions here. Will you? Y/N"); //check for input
+            GameFrame.writeToScreen("You can eat some provisions here. Will you? Y/N");
             boolean answer = GameMethods.yn();
             if (answer)
             {
@@ -622,19 +632,23 @@ public class RunPage {
                 player.setProvisions(playerProvisions);
                 playerHP += 4;
                 player.setStamina(playerHP);
-                System.out.println("You eat some hearty provisions and regain 4 STAMINA.");
-                System.out.println("Current Stamina: " + playerHP);
+                //System.out.println("You eat some hearty provisions and regain 4 STAMINA.");
+                GameFrame.writeToScreen("You eat some hearty provisions and regain 4 STAMINA.");
+                //System.out.println("Current Stamina: " + playerHP);
+                GameFrame.writeToScreen("Current Stamina: " + playerHP);
                 return;
             }
             else
             {
-                System.out.println("You decide not to eat your provisions right now.");
+                //System.out.println("You decide not to eat your provisions right now.");
+                GameFrame.writeToScreen("You decide not to eat your provisions right now.");
                 return;
             }
         }
         else
         {
-            System.out.println("You don't have any provisions to eat!");
+            //System.out.println("You don't have any provisions to eat!");
+            GameFrame.writeToScreen("You don't have any provisions to eat!");
             return;
 
         }

@@ -23,10 +23,13 @@ public class WarlockGame
 
     public WarlockGame() throws InterruptedException, IOException
     {
+        GameFrame gameGUI = new GameFrame();
+        gameGUI.setVisible(true);
         this.savedGames = new HashMap<>();
         this.getPlayers(fileName);
         //Game Startup Text
         System.out.println(FileMethods.readText("resources/PageText/gamestart.txt"));
+        GameFrame.writeToScreen(FileMethods.readText("resources/PageText/gamestart.txt"));
         //load or create char sheet
         CharacterSheet player = checkPlayer(startSaves());
         //Start page loop.

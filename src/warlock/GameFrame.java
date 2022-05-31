@@ -35,7 +35,7 @@ public class GameFrame extends javax.swing.JFrame {
         playerInput = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        gameOutput = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Warlock of Firetop Mountain");
@@ -61,9 +61,10 @@ public class GameFrame extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        gameOutput.setEditable(false);
+        gameOutput.setColumns(20);
+        gameOutput.setRows(5);
+        jScrollPane1.setViewportView(gameOutput);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -115,7 +116,7 @@ public class GameFrame extends javax.swing.JFrame {
         
         if (playerInput.getText().isEmpty())
         {
-            JOptionPane.showMessageDialog(null, "Please enter input.");
+            JOptionPane.showMessageDialog(null, "Please enter an input.");
         }
         else
         {
@@ -162,12 +163,18 @@ public class GameFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JTextArea gameOutput;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField playerInput;
     // End of variables declaration//GEN-END:variables
+
+    public static void writeToScreen(String... strings) {
+        for (String s : strings) {
+            gameOutput.append(s + "\n");
+        }
+    }
 }
