@@ -664,17 +664,18 @@ public class RunPage {
         Boolean x = true;
         while (x) {
             //System.out.println("Press C to view current character sheet,");
-            GameFrame.writeToScreen("Press C to view current character sheet,");
+            //GameFrame.writeToScreen("Press Character Sheet to view current character sheet,");
             //System.out.println("I to view Inventory and drink potions,");
-            GameFrame.writeToScreen("I to view Inventory and drink potions,");
+            //GameFrame.writeToScreen("Inventory to view Inventory and drink potions,");
             //System.out.println("H for help");
-            GameFrame.writeToScreen("H for help");
+            //GameFrame.writeToScreen("Help for help");
             //System.out.println("X to save and exit");
-            GameFrame.writeToScreen("X to save and exit");
+            //GameFrame.writeToScreen("X to save and exit");
             //System.out.println("or anything else to continue.");
-            GameFrame.writeToScreen("or anything else to continue.");
-            String answer = scanner.nextLine();
-            //String answer = GameFrame.getInput();
+            //GameFrame.writeToScreen("or anything else to continue.");
+            //String answer = scanner.nextLine();
+            GameFrame.writeToScreen("\nEnd of page, press a button!\n");
+            String answer = GameFrame.endOfPageButtons();
             if (answer.equalsIgnoreCase("c")) {
                 player.printCharSheet();
             } else if (answer.equalsIgnoreCase("i")) {

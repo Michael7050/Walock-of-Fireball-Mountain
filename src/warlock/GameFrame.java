@@ -5,8 +5,6 @@
  */
 package warlock;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Michael Jones
@@ -14,7 +12,10 @@ import javax.swing.JOptionPane;
 public class GameFrame extends javax.swing.JFrame {
     
     private static String strOutput;
-    private int intOutput;
+    private static int intOutput;
+    private static boolean buttonPress = false;
+    private static boolean yes;
+    private static boolean no;
     
 
     /**
@@ -51,6 +52,7 @@ public class GameFrame extends javax.swing.JFrame {
         inventoryButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
         continueButton = new javax.swing.JButton();
+        helpButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Warlock of Firetop Mountain");
@@ -71,7 +73,7 @@ public class GameFrame extends javax.swing.JFrame {
         gameOutput.setRows(5);
         jScrollPane1.setViewportView(gameOutput);
 
-        jLabel5.setText("Char Sheet, Inventory, Save and exit.");
+        jLabel5.setText("End of page buttons.");
 
         yesButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         yesButton.setText("Yes");
@@ -85,6 +87,11 @@ public class GameFrame extends javax.swing.JFrame {
         noButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         noButton.setText("No");
         noButton.setEnabled(false);
+        noButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noButtonActionPerformed(evt);
+            }
+        });
 
         button1.setText("1");
         button1.setEnabled(false);
@@ -128,12 +135,27 @@ public class GameFrame extends javax.swing.JFrame {
 
         charSheetButton.setText("Character Sheet");
         charSheetButton.setEnabled(false);
+        charSheetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                charSheetButtonActionPerformed(evt);
+            }
+        });
 
         inventoryButton.setText("Inventory");
         inventoryButton.setEnabled(false);
+        inventoryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inventoryButtonActionPerformed(evt);
+            }
+        });
 
         exitButton.setText("Save and Exit");
         exitButton.setEnabled(false);
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
 
         continueButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         continueButton.setText("Continue");
@@ -144,65 +166,76 @@ public class GameFrame extends javax.swing.JFrame {
             }
         });
 
+        helpButton.setText("Help");
+        helpButton.setEnabled(false);
+        helpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(261, 261, 261))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(button3, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                            .addComponent(button5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel3)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(205, 205, 205)
+                        .addComponent(continueButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(yesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(noButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5)
+                                .addGap(101, 101, 101))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(150, 150, 150)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(helpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(charSheetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(21, 21, 21)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(inventoryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(416, 416, 416)
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(57, 57, 57)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 837, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 886, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(89, 89, 89)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(44, 44, 44)
-                                        .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addComponent(yesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52)
-                                .addComponent(noButton, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(continueButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(95, 95, 95))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(charSheetButton)
-                                .addGap(31, 31, 31)
-                                .addComponent(inventoryButton)
-                                .addGap(27, 27, 27)
-                                .addComponent(exitButton)
-                                .addGap(0, 33, Short.MAX_VALUE)))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addGap(271, 271, 271)
+                        .addComponent(jLabel1)))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,37 +244,40 @@ public class GameFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(7, 7, 7)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(yesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(noButton))
+                        .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(continueButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(button2))
-                        .addGap(33, 33, 33))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(yesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(noButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(charSheetButton)
+                                .addComponent(inventoryButton)))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(button1)
-                            .addComponent(button3)
-                            .addComponent(charSheetButton)
-                            .addComponent(inventoryButton)
-                            .addComponent(exitButton))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(button4)
-                            .addComponent(button5))
+                            .addComponent(continueButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(exitButton)
+                            .addComponent(helpButton))
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(3, 3, 3)
+                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel4))
                         .addContainerGap())))
         );
 
@@ -249,32 +285,64 @@ public class GameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void yesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesButtonActionPerformed
-        // TODO add your handling code here:
+        yes = true;
+        buttonPress = true;
     }//GEN-LAST:event_yesButtonActionPerformed
 
     private void continueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continueButtonActionPerformed
         // TODO add your handling code here:
+        buttonPress = true;
     }//GEN-LAST:event_continueButtonActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         intOutput = 1;
+        buttonPress = true;
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         intOutput = 2;
+        buttonPress = true;
     }//GEN-LAST:event_button2ActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         intOutput = 3;
+        buttonPress = true;
     }//GEN-LAST:event_button3ActionPerformed
 
     private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
         intOutput = 4;
+        buttonPress = true;
     }//GEN-LAST:event_button4ActionPerformed
 
     private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
         intOutput = 5;
+        buttonPress = true;
     }//GEN-LAST:event_button5ActionPerformed
+
+    private void noButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noButtonActionPerformed
+        no = true;
+        buttonPress = true;
+    }//GEN-LAST:event_noButtonActionPerformed
+
+    private void charSheetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charSheetButtonActionPerformed
+        strOutput = "c";
+        buttonPress = true;
+    }//GEN-LAST:event_charSheetButtonActionPerformed
+
+    private void inventoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventoryButtonActionPerformed
+        strOutput = "i";
+        buttonPress = true;
+    }//GEN-LAST:event_inventoryButtonActionPerformed
+
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+        strOutput = "x";
+        buttonPress = true;
+    }//GEN-LAST:event_exitButtonActionPerformed
+
+    private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
+        strOutput = "h";
+        buttonPress = true;
+    }//GEN-LAST:event_helpButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,24 +380,25 @@ public class GameFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton button1;
-    private javax.swing.JButton button2;
-    private javax.swing.JButton button3;
-    private javax.swing.JButton button4;
-    private javax.swing.JButton button5;
-    private javax.swing.JButton charSheetButton;
-    private javax.swing.JButton continueButton;
-    private javax.swing.JButton exitButton;
-    private javax.swing.JTextArea gameOutput;
-    private javax.swing.JButton inventoryButton;
+    private static javax.swing.JButton button1;
+    private static javax.swing.JButton button2;
+    private static javax.swing.JButton button3;
+    private static javax.swing.JButton button4;
+    private static javax.swing.JButton button5;
+    private static javax.swing.JButton charSheetButton;
+    private static javax.swing.JButton continueButton;
+    private static javax.swing.JButton exitButton;
+    private static javax.swing.JTextArea gameOutput;
+    private static javax.swing.JButton helpButton;
+    private static javax.swing.JButton inventoryButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton noButton;
-    private javax.swing.JButton yesButton;
+    private static javax.swing.JButton noButton;
+    private static javax.swing.JButton yesButton;
     // End of variables declaration//GEN-END:variables
 
     public static void writeToScreen(String... strings) {
@@ -339,23 +408,10 @@ public class GameFrame extends javax.swing.JFrame {
         }
     }
     
-    public static String getYesNo()
-    {
-        strOutput = null;
-        yesButton.setEnabled(true);
-        noButton.setEnabled(true);
-        
-        
-        
-        yesButton.setEnabled(false);
-        noButton.setEnabled(false);
-        
-        return strOutput;
-    }
-    
-    public int intInput(int x)
+    public static int intInput(int x)
     {
         intOutput = 0;
+        buttonPress = false;
         switch (x)
         {
             case 1:
@@ -383,17 +439,116 @@ public class GameFrame extends javax.swing.JFrame {
                 button4.setEnabled(true);
                 button5.setEnabled(true);
                 break;
-        }      
+        }
+
+        while (!buttonPress)
+        {
+            try
+            {
+                Thread.sleep(100);
+            } catch (InterruptedException ignored)
+            {
+            }
+        }
         
+        disableIntButtons();
         
+        return intOutput;
         
+    }
+
+    public static boolean ynInput()
+    {
+        buttonPress = false;
+        yes = false;
+        no = false;
+
+        yesButton.setEnabled(true);
+        noButton.setEnabled(true);
+
+        while (!buttonPress)
+        {
+            try
+            {
+                Thread.sleep(100);
+            }
+            catch(InterruptedException ignored)
+            {
+            }
+        }
+
+        disableYNButtons();
+
+        if (yes == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static void continuePrompt()
+    {
+        buttonPress = false;
+        continueButton.setEnabled(true);
+
+        while (!buttonPress)
+        {
+            try
+            {
+                Thread.sleep(100);
+            } catch (InterruptedException ignored)
+            {
+            }
+        }
+        continueButton.setEnabled(false);
+    }
+
+    public static String endOfPageButtons()
+    {
+        strOutput = "z";
+        buttonPress = false;
+        continueButton.setEnabled(true);
+        charSheetButton.setEnabled(true);
+        inventoryButton.setEnabled(true);
+        exitButton.setEnabled(true);
+        helpButton.setEnabled(true);
+
+        while (!buttonPress)
+        {
+            try
+            {
+                Thread.sleep(100);
+            } catch (InterruptedException ignored)
+            {
+            }
+        }
+
+
+        continueButton.setEnabled(false);
+        charSheetButton.setEnabled(false);
+        inventoryButton.setEnabled(false);
+        exitButton.setEnabled(false);
+        helpButton.setEnabled(false);
+        return strOutput;
+    }
+
+    private static void disableIntButtons()
+    {
         button1.setEnabled(false);
         button2.setEnabled(false);
         button3.setEnabled(false);
         button4.setEnabled(false);
         button5.setEnabled(false);
-        
-        return intOutput;
-        
     }
+
+    private static void disableYNButtons()
+    {
+        yesButton.setEnabled(false);
+        noButton.setEnabled(false);
+    }
+
+
 }

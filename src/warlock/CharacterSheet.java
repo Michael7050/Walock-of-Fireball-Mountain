@@ -62,14 +62,22 @@ public class CharacterSheet extends CombatSheet {
 
     public void printCharSheet()
     {
-        System.out.println("Current Character Sheet:");
-        System.out.println("Name: " + this.getName());
-        System.out.println("Current Stamina: " + this.getStamina());
-        System.out.println("Current Skill " + this.getSkill());
-        System.out.println("Current Luck " + this.getLuck());
-        System.out.println("Gold: " + this.getGold());
-        System.out.println("Provisions: " + this.getProvisions());
-        System.out.println("Current Page: " + this.getPagenum());
+        //System.out.println("Current Character Sheet:");
+        GameFrame.writeToScreen("Current Character Sheet:");
+        //System.out.println("Name: " + this.getName());
+        GameFrame.writeToScreen("Name: " + this.getName());
+        //System.out.println("Current Stamina: " + this.getStamina());
+        GameFrame.writeToScreen("Current Stamina: " + this.getStamina());
+        //System.out.println("Current Skill " + this.getSkill());
+        GameFrame.writeToScreen("Current Skill " + this.getSkill());
+        //System.out.println("Current Luck " + this.getLuck());
+        GameFrame.writeToScreen("Current Luck " + this.getLuck());
+        //System.out.println("Gold: " + this.getGold());
+        GameFrame.writeToScreen("Gold: " + this.getGold());
+        //System.out.println("Provisions: " + this.getProvisions());
+        GameFrame.writeToScreen("Provisions: " + this.getProvisions());
+        //System.out.println("Current Page: " + this.getPagenum());
+        GameFrame.writeToScreen("Current Page: " + this.getPagenum());
         return;
     }
 

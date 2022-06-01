@@ -17,7 +17,21 @@ public class playGame
 
    public static void main(String[] args) throws InterruptedException, IOException
    {
-       WarlockGame game = new WarlockGame();
+    WarlockGame game = new WarlockGame();
+//       GameFrame gameGUI = new GameFrame();
+//       gameGUI.setVisible(true);
+//       boolean answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
        
    }
 }

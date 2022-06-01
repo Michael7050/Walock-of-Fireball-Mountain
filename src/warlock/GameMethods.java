@@ -47,7 +47,9 @@ public class GameMethods
             {
                 try
                 {
-                    input = scan.nextInt();
+                    //input = scan.nextInt();
+                    input = GameFrame.intInput(parameter);
+
                     //String strInput = GameFrame.getInput();
                     //input = Integer.parseInt(strInput);
                     break;
@@ -74,36 +76,39 @@ public class GameMethods
 
     public static void enterToContinue(){
         //System.out.println("Press ENTER to continue...");
-        GameFrame.writeToScreen("Press ENTER to continue...");
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+        GameFrame.writeToScreen("Press Continue to continue...");
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.nextLine();
         //GameFrame.getInput();
+        GameFrame.continuePrompt();
     }
 
     public static boolean yn()
     {
         Boolean answer = null;
-        while (true) //check this loop?
-        {
-            String response;
-            Scanner scan = new Scanner(System.in);
-            response = scan.nextLine().trim().toLowerCase();
-            if (response.equals("y"))
-            {
-                answer = true;
-                break;
-            }
-            else if (response.equals("n"))
-            {
-                answer = false;
-                break;
-            }
-            else
-            {
-                //System.out.println("Sorry, I didn't catch that. Please answer y/n");
-                GameFrame.writeToScreen("Sorry, I didn't catch that. Please answer y/n");
-            }
-        }
+//        while (true) //check this loop?
+//        {
+//            String response;
+//            Scanner scan = new Scanner(System.in);
+//            response = scan.nextLine().trim().toLowerCase();
+//            if (response.equals("y"))
+//            {
+//                answer = true;
+//                break;
+//            }
+//            else if (response.equals("n"))
+//            {
+//                answer = false;
+//                break;
+//            }
+//            else
+//            {
+//                //System.out.println("Sorry, I didn't catch that. Please answer y/n");
+//                GameFrame.writeToScreen("Sorry, I didn't catch that. Please answer y/n");
+//            }
+//            answer = GameFrame.ynInput();
+//        }
+        answer = GameFrame.ynInput();
         return answer;
     }
 
