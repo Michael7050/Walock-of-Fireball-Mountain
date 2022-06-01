@@ -116,6 +116,7 @@ public class WarlockGame
         //System.out.println("Enter player name to load game, or start new game:");
         GameFrame.writeToScreen("Enter player name to either load game, or start new game:");
         String input = scan.nextLine();
+        //String input = GameFrame.getInput();
         return input;
     }
 }

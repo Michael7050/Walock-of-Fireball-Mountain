@@ -48,12 +48,17 @@ public class GameMethods
                 try
                 {
                     input = scan.nextInt();
+                    //String strInput = GameFrame.getInput();
+                    //input = Integer.parseInt(strInput);
                     break;
                 } catch (InputMismatchException e)
                 {
                     //System.out.println("This needs to be a number.");
                     GameFrame.writeToScreen("This needs to be a number.");
                     scan.nextLine();
+                }
+                catch (NumberFormatException ex){
+                    GameFrame.writeToScreen("This needs to be a number.");
                 }
             }
 
@@ -68,9 +73,11 @@ public class GameMethods
     }
 
     public static void enterToContinue(){
-        System.out.println("Press ENTER to continue...");
+        //System.out.println("Press ENTER to continue...");
+        GameFrame.writeToScreen("Press ENTER to continue...");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
+        //GameFrame.getInput();
     }
 
     public static boolean yn()

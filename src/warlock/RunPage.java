@@ -674,6 +674,7 @@ public class RunPage {
             //System.out.println("or anything else to continue.");
             GameFrame.writeToScreen("or anything else to continue.");
             String answer = scanner.nextLine();
+            //String answer = GameFrame.getInput();
             if (answer.equalsIgnoreCase("c")) {
                 player.printCharSheet();
             } else if (answer.equalsIgnoreCase("i")) {

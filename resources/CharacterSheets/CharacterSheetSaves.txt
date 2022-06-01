@@ -1,4 +1,4 @@
-banana 24 7 0 24 2 7 10 6 10 248 0 2 0 resources/CharacterSheets/bananaInventory.txt 
-Harrison 22 8 0 10 12 12 9 22 1 999 2 0 0 resources/CharacterSheets/HarrisonInventory.txt 
-Blake 19 10 0 10 19 11 1 10 12 278 0 0 2 resources/CharacterSheets/BlakeInventory.txt 
-Michael 19 9 0 12 9 11 19 2 10 1 2 0 0 resources/CharacterSheets/MichaelInventory.txt 
+banana 24 7 0 2 10 7 6 10 24 248 0 2 0 resources/CharacterSheets/bananaInventory.txt 
+Harrison 22 8 0 12 9 12 22 1 10 999 2 0 0 resources/CharacterSheets/HarrisonInventory.txt 
+Blake 19 10 0 19 1 11 10 12 10 278 0 0 2 resources/CharacterSheets/BlakeInventory.txt 
+Michael 19 9 0 9 19 11 2 11 12 301 2 0 0 resources/CharacterSheets/MichaelInventory.txt 
