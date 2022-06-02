@@ -10,12 +10,10 @@ package warlock;
  * @author Michael Jones
  */
 public class chooseChar2 extends javax.swing.JFrame {
-    
-    String character = "Michael";
 
-    public String getCharacter() {
-        return character;
-    }
+    String character = "Michael";
+    static boolean buttonPress = false;
+
 
     /**
      * Creates new form chooseChar2
@@ -84,6 +82,8 @@ public class chooseChar2 extends javax.swing.JFrame {
         character = charChoosy.getSelectedItem().toString();
         this.setVisible(false);
         System.out.println(character);
+        buttonPress = true;
+        //WarlockGame.getInstance().setCharactorselect(character);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -122,8 +122,23 @@ public class chooseChar2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> charChoosy;
+    private static javax.swing.JComboBox<String> charChoosy;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public static String getChar()
+    {
+        while (!buttonPress)
+        {
+            try
+            {
+                Thread.sleep(100);
+            } catch (InterruptedException ignored)
+            {
+            }
+        }
+        String output = charChoosy.getSelectedItem().toString();
+        return output;
+    }
 }

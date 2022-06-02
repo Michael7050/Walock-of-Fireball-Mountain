@@ -33,6 +33,8 @@ public class WarlockGame {
     private static Connection conn;
     private static Statement statement;
 
+
+
     private WarlockGame() {
         dbManager = new databaseManager();
         conn = dbManager.getConnection();
@@ -120,7 +122,8 @@ public class WarlockGame {
     }
 
     //write a method that lists all current characters, and prompts user to enter a name
-    public String startSaves() {
+    public String startSaves()
+    {
         Scanner scan = new Scanner(System.in);
         //System.out.println("Current saved games:");
         GameFrame.writeToScreen("Current saved games:");
@@ -128,14 +131,17 @@ public class WarlockGame {
         String[] svGame = savedGames.keySet().toArray(new String[0]);
         GameFrame.writeToScreen(svGame);
         //System.out.println("Enter player name to load game, or start new game:");
-        //GameFrame.writeToScreen("Choose your character");
-        //chooseChar2 selection = new chooseChar2();
-        //selection.setVisible(true);
-        //String input = selection.getCharacter();
-        String input = scan.nextLine();
+        GameFrame.writeToScreen("Choose your character");
+        chooseChar2 selection = new chooseChar2();
+        selection.setVisible(true);
+
+        String input = chooseChar2.getChar();
+//        String input = selection.getCharacter();
+//        String input = scan.nextLine();
         //String input = GameFrame.getInput();
         return input;
     }
+
 
     public static WarlockGame getInstance() {
         return instance;
