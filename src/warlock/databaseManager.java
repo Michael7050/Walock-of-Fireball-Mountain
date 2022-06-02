@@ -14,7 +14,6 @@ public final class databaseManager {
      * server first. Meanwhile, you need to import 'derbyclient.jar' to the
      * libraries.
      */
-    //    private static final String URL = "jdbc:derby://localhost:1527/BookStoreDB";
     /**
      * If you try to connect the database embedded in the project, you must stop
      * the server first. Meanwhile, you need to import 'derby.jar' to the

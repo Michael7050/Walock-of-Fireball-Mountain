@@ -16,9 +16,7 @@ public class GameMethods
 
         Random rng = new Random();
 
-        int rollD6 = rng.nextInt(6) + 1;
-
-        return rollD6;
+        return rng.nextInt(6) + 1;
     }
 
     public static int printRoll()//rolls dice and prints it out.
@@ -35,8 +33,7 @@ public class GameMethods
     //method to take in input, and ensure it is within given parameters.
     public static int takeInput(int parameter)
     {
-        int input = 0;
-        int validate = parameter;
+        int input;
         Scanner scan = new Scanner(System.in);
         boolean isNumber = false;
         while (true)
@@ -64,7 +61,7 @@ public class GameMethods
                 }
             }
 
-            if (input > 0 && input <= validate)
+            if (input > 0 && input <= parameter)
             {
                 return input;
             }
@@ -85,7 +82,10 @@ public class GameMethods
 
     public static boolean yn()
     {
-        Boolean answer = null;
+        Boolean answer;
+
+        //old code for running in console - keeping here for troubleshooting
+
 //        while (true) //check this loop?
 //        {
 //            String response;
@@ -108,6 +108,8 @@ public class GameMethods
 //            }
 //            answer = GameFrame.ynInput();
 //        }
+
+
         answer = GameFrame.ynInput();
         return answer;
     }

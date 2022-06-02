@@ -39,22 +39,24 @@ public class WarlockGame {
         dbManager = new databaseManager();
         conn = dbManager.getConnection();
         this.loadPageData();
-        //this.dbManager.closeConnections();
         CharacterSheet player = null;
         int tempPageNum = 0;
         GameFrame gameGUI = new GameFrame();
         gameGUI.setVisible(true);
         this.savedGames = new HashMap<>();
         this.getPlayers(fileName);
+
         //Game Startup Text
         //System.out.println(FileMethods.readText("resources/PageText/gamestart.txt"));
         GameFrame.writeToScreen(FileMethods.readText("resources/PageText/gamestart.txt"));
+
         //load or create char sheet
         try {
             player = checkPlayer(startSaves());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         //Start page loop.
         while (true) //this loop runs the whole game page by page.
         {
@@ -135,11 +137,7 @@ public class WarlockGame {
         chooseChar2 selection = new chooseChar2();
         selection.setVisible(true);
 
-        String input = chooseChar2.getChar();
-//        String input = selection.getCharacter();
-//        String input = scan.nextLine();
-        //String input = GameFrame.getInput();
-        return input;
+        return chooseChar2.getChar();
     }
 
 
@@ -147,6 +145,7 @@ public class WarlockGame {
         return instance;
     }
 
+    //checks to see if table exists, and if it does, drops it, to make a new one.
     public void checkTables(String name) {
 
         try {
@@ -171,12 +170,11 @@ public class WarlockGame {
 
     }
 
+    //looks in the database for page data
     public static int[] getPageDataFromDB(int pgnum) {
         String[] strData = new String[15];
         int[] intData = new int[15];
         try {
-
-            //WarlockGame.statement = conn.createStatement();
             ResultSet rs = conn.prepareStatement("SELECT * FROM PAGEDATA WHERE pgnum = '" + pgnum + "'").executeQuery();
 
             while (rs.next()) {
@@ -205,13 +203,13 @@ public class WarlockGame {
                     }
                 }
             }
-            //Page page = new Page(rs.getString("pgnum"), rs.getString("typeofinput"), rs.getString("dest1"), rs.getString("dest2"), rs.getString("encounternum"), rs.getString("stamgainplus"), rs.getString("skillgainplus"), rs.getString("stamgain"), rs.getString("skillgain"), rs.getString("dest3"), rs.getString("luckgain"), rs.getString("gold"), rs.getString("provisions"), rs.getString("dest4"), rs.getString("dest5"));
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
         return intData;
     }
 
+    //creates table and populates it with data for Page Data
     public void loadPageData() {
         try {
             this.statement = conn.createStatement();
@@ -235,6 +233,7 @@ public class WarlockGame {
         }
     }
 
+    //creates pagedata table
     private String createPageData() {
         String sql = ("CREATE TABLE \"PAGEDATA\" \n"
                 + "(\n"
