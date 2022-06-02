@@ -17,22 +17,8 @@ public class playGame
 
    public static void main(String[] args) throws InterruptedException, IOException
    {
-    WarlockGame game = new WarlockGame();
-//       GameFrame gameGUI = new GameFrame();
-//       gameGUI.setVisible(true);
-//       boolean answer = gameGUI.ynInput();
-//       System.out.println(answer);
-//       answer = gameGUI.ynInput();
-//       System.out.println(answer);
-//       answer = gameGUI.ynInput();
-//       System.out.println(answer);
-//       answer = gameGUI.ynInput();
-//       System.out.println(answer);
-//       answer = gameGUI.ynInput();
-//       System.out.println(answer);
-//       answer = gameGUI.ynInput();
-//       System.out.println(answer);
-       
+       //grabs a singleton instance of warlock game.
+    WarlockGame game = WarlockGame.getInstance();
    }
 }
 
@@ -102,6 +88,22 @@ public class playGame
         //run page
         //input includes show char sheet, or else
         //do i put string in file and hashmap for data?
+
+            //test gui y/n
+//       GameFrame gameGUI = new GameFrame();
+//       gameGUI.setVisible(true);
+//       boolean answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
+//       answer = gameGUI.ynInput();
+//       System.out.println(answer);
 
         //things to do in pages:
         //text

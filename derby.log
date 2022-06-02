@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jun 02 20:25:10 NZST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0181-2384-bb28-000000b35400 
+on database directory D:\Michael Jones\Student paperwork\2022 S1 Classes\Warlock Project\Warlock\warlockDB with class loader sun.misc.Launcher$AppClassLoader@1453f44 
+Loaded from file:/D:/Michael%20Jones/Downloads/db-derby-10.14.2.0-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_321-b07
+user.dir=D:\Michael Jones\Student paperwork\2022 S1 Classes\Warlock Project\Warlock
+os.name=Windows 10
+os.arch=x86
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

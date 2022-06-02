@@ -507,6 +507,7 @@ public class RunPage {
                 GameFrame.writeToScreen("Game shutting down now, press enter.");
 
                 GameMethods.enterToContinue();
+                databaseManager.closeConnections();
                 System.exit(0);
                 break;
 
@@ -674,7 +675,7 @@ public class RunPage {
             //System.out.println("or anything else to continue.");
             //GameFrame.writeToScreen("or anything else to continue.");
             //String answer = scanner.nextLine();
-            GameFrame.writeToScreen("\nEnd of page, press a button!\n");
+            GameFrame.writeToScreen("\nStart of page, press a button!\n");
             String answer = GameFrame.endOfPageButtons();
             if (answer.equalsIgnoreCase("c")) {
                 player.printCharSheet();
@@ -693,6 +694,7 @@ public class RunPage {
             {
                 //System.out.println("Saving current progress, and closing game.");
                 GameFrame.writeToScreen("Saving current progress, and closing game.");
+                databaseManager.closeConnections();
                 System.exit(0);
             }
             else {

@@ -1,8 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+///*
+// * To change this license header, choose License Headers in Project Properties.
+// * To change this template file, choose Tools | Templates
+// * and open the template in the editor.
+// */
 //package warlock;
 //
 //import java.sql.Connection;
@@ -13,37 +13,37 @@
 //import java.sql.Statement;
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
-//
-///**
-// *
-// * @author Michael Jones
-// */
+////
+/////**
+//// *
+//// * @author Michael Jones
+//// */
 //public class gameDatabases {
-//
-//    SimpleDBManager dbManager;
-//    Connection conn;
-//    Statement statement;
-//
-//    public gameDataBases()
-//    {
-//        dbManager = new SimpleDBManager();
-//        conn = dbManager.getConnection();
-//
-//        try {
-//            statement = conn.createStatement();
-//        } catch (SQLException ex) {
-//            System.out.println(ex.getMessage());
-//        }
-//    }
-//
-//
-//
-//    //creates and populates database with page data
+////
+////    SimpleDBManager dbManager;
+////    Connection conn;
+//   private static Statement statement;
+////
+////    public gameDataBases()
+////    {
+////        dbManager = new SimpleDBManager();
+////        conn = dbManager.getConnection();
+////
+////        try {
+////            statement = conn.createStatement();
+////        } catch (SQLException ex) {
+////            System.out.println(ex.getMessage());
+////        }
+////    }
+////
+////
+////
+////    //creates and populates database with page data
 //    public static void loadPageData()
 //    {
 //        try{
 //
-//        statement.addBatch("CREATE TABLE pageData \n" +
+//        this.statement.addBatch("CREATE TABLE pageData \n" +
 //"(\n" +
 //"    pgnum	varchar(300),\n" +
 //"    typeofinput	varchar(300),\n" +
@@ -469,13 +469,7 @@
 //"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
 //"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
 //"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
-//"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');\n" +
+//
 //"INSERT INTO pageData (pgnum,typeofinput,dest1,dest2,encounternum,stamgainplus,skillgainplus,stamgain,skillgain,dest3,luckgain,gold,provisions,dest4,dest5) VALUES ('', '', '', '', '', '', '', '', '', '', '', '', '', '', '');");
 //        statement.executeBatch();
 //    }
@@ -483,7 +477,6 @@
 //    {
 //        System.out.println(ex.getMessage());
 //    }
-//    closeConnection;
 //}
 //
 //}

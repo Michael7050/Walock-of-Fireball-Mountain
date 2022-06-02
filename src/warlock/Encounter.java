@@ -327,6 +327,7 @@ public class Encounter
         GameFrame.writeToScreen("You made it to page: " + player.getPagenum() + " and died because of " + death + ".");
         //System.out.println("Better luck next time!");
         GameFrame.writeToScreen("Better luck next time!");
+        databaseManager.closeConnections();
         System.exit(0);
     }
 
