@@ -19,7 +19,7 @@ public class CharacterSheet extends CombatSheet {
     private int initialStamina;
     private int gold;
     private int provisions;
-    private int pagenum;
+    private int pagenum = 1;
     private int luckPot = 0;
     private int staminaPot = 0;
     private int skillPot = 0;

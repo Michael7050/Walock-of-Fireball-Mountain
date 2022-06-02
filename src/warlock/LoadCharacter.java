@@ -60,7 +60,7 @@ public class LoadCharacter
         createFile(filePath);
 
         //create the charsheet
-        CharacterSheet newChar = new CharacterSheet(name, stamina, skill, 0, 0, luck, luck, skill, stamina, 0, 0, filePath);
+        CharacterSheet newChar = new CharacterSheet(name, stamina, skill, 0, 0, luck, luck, skill, stamina, 0, 1, filePath);
 
         //choose equipment:
         //System.out.print(FileMethods.readText("resources/PageText/StartingEquipment.txt"));
@@ -96,6 +96,7 @@ public class LoadCharacter
         newChar.setProvisions(10);
 //Convert Character data to save format
         String saveChar = FileMethods.characterToOutput(newChar);
+        System.out.println(saveChar);
         return newChar;
     }
 

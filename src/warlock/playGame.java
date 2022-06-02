@@ -56,8 +56,8 @@ public class playGame
 
 
             //test create character
-// CharacterCreation.createCharacter("Michael");
-
+ //CharacterCreation.createCharacter("Michael");
+         //}
         //test input
 //        int test = GameMethods.takeInput(3);
 //        System.out.println(test);

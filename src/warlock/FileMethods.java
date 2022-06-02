@@ -61,11 +61,12 @@ public class FileMethods
 
         return everything;
     }
+    
     public static int[] getPageData(int pgnum)
     {
-        String rawData = FileMethods.readLineData(pgnum, "resources/pageData.txt");
-        String[] parts = rawData.split(" ");
-        int[] data = pageStringToPageData(parts);
+        //String rawData = FileMethods.readLineData(pgnum, "resources/pageData.txt");
+        //String[] parts = rawData.split(" ");
+        int[] data = WarlockGame.getPageDataFromDB(pgnum);
         return data;
     }
 

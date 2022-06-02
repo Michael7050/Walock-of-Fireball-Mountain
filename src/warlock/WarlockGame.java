@@ -29,14 +29,15 @@ public class WarlockGame {
     private final HashMap<String, CharacterSheet> savedGames;
     private final String fileName = "resources/CharacterSheets/CharacterSheetSaves.txt";
 
-    private final databaseManager dbManager;
-    private final Connection conn;
-    private Statement statement;
+    private static databaseManager dbManager;
+    private static Connection conn;
+    private static Statement statement;
 
     private WarlockGame() {
         dbManager = new databaseManager();
         conn = dbManager.getConnection();
         this.loadPageData();
+        //this.dbManager.closeConnections();
         CharacterSheet player = null;
         int tempPageNum = 0;
         GameFrame gameGUI = new GameFrame();
@@ -127,7 +128,10 @@ public class WarlockGame {
         String[] svGame = savedGames.keySet().toArray(new String[0]);
         GameFrame.writeToScreen(svGame);
         //System.out.println("Enter player name to load game, or start new game:");
-        GameFrame.writeToScreen("Enter player name to either load game, or start new game:");
+        //GameFrame.writeToScreen("Choose your character");
+        //chooseChar2 selection = new chooseChar2();
+        //selection.setVisible(true);
+        //String input = selection.getCharacter();
         String input = scan.nextLine();
         //String input = GameFrame.getInput();
         return input;
@@ -161,6 +165,47 @@ public class WarlockGame {
 
     }
 
+    public static int[] getPageDataFromDB(int pgnum) {
+        String[] strData = new String[15];
+        int[] intData = new int[15];
+        try {
+
+            //WarlockGame.statement = conn.createStatement();
+            ResultSet rs = conn.prepareStatement("SELECT * FROM PAGEDATA WHERE pgnum = '" + pgnum + "'").executeQuery();
+
+            while (rs.next()) {
+                for (int i = 1; i <= 15; i++) {
+                    strData[(i - 1)] = (rs.getString(i));
+                }
+            }
+
+            if (strData[0] == null) {
+                System.out.println("game died");
+                return null;
+            }
+
+            for (int i = 0; i < strData.length; i++) {
+                try {
+                    intData[i] = Integer.parseInt(strData[i]);
+                } catch (NumberFormatException e) {
+                    //replaces empty variables with error value
+                    if (strData[i].equals("dest1") || strData[i].equals("dest2") || strData[i].equals("encounternum") || strData[i].equals("dest3") || strData[i].equals("dest4") || strData[i].equals("dest5") || strData[i].equals("pgnum")) {
+                        intData[i] = 1;
+                    } //replaces empty variables with empty value
+                    else if (strData[i].equals("typeofinput") || strData[i].equals("stamgainplus") || strData[i].equals("skillgainplus") || strData[i].equals("stamgain") || strData[i].equals("skillgain") || strData[i].equals("luckgain") || strData[i].equals("gold") || strData[i].equals("provisions")) {
+                        intData[i] = 0;
+                    } else {
+                        intData[i] = 0;
+                    }
+                }
+            }
+            //Page page = new Page(rs.getString("pgnum"), rs.getString("typeofinput"), rs.getString("dest1"), rs.getString("dest2"), rs.getString("encounternum"), rs.getString("stamgainplus"), rs.getString("skillgainplus"), rs.getString("stamgain"), rs.getString("skillgain"), rs.getString("dest3"), rs.getString("luckgain"), rs.getString("gold"), rs.getString("provisions"), rs.getString("dest4"), rs.getString("dest5"));
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return intData;
+    }
+
     public void loadPageData() {
         try {
             this.statement = conn.createStatement();
@@ -169,14 +214,15 @@ public class WarlockGame {
             this.statement.executeBatch();
             //this.statement.addBatch("INSERT INTO PAGEDATA VALUES ('1', '1', '71', '278', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5')");
             this.statement.executeBatch();
-             this.statement.addBatch(this.insertPageData1());
-             this.statement.executeBatch();
-             this.statement.addBatch(this.insertPageData1_5());
-             this.statement.executeBatch();
-             this.statement.addBatch(this.insertPageData2());
-             this.statement.executeBatch();
-             this.statement.addBatch(this.insertPageData2_5());
-             this.statement.executeBatch();
+            this.statement.addBatch(this.insertPageData1());
+            this.statement.executeBatch();
+            this.statement.addBatch(this.insertPageData1_5());
+            this.statement.executeBatch();
+            this.statement.addBatch(this.insertPageData2());
+            this.statement.executeBatch();
+            this.statement.addBatch(this.insertPageData2_5());
+            this.statement.executeBatch();
+            System.out.println("Table created and populated.");
 
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -186,7 +232,7 @@ public class WarlockGame {
     private String createPageData() {
         String sql = ("CREATE TABLE \"PAGEDATA\" \n"
                 + "(\n"
-                + "    \"pgnum\"\tvarchar(300),\n"
+                + "    \"PGNUM\"\tvarchar(300),\n"
                 + "    \"typeofinput\"\tvarchar(300),\n"
                 + "    \"dest1\"\tvarchar(300),\n"
                 + "    \"dest2\"\tvarchar(300),\n"
@@ -306,12 +352,11 @@ public class WarlockGame {
                 + "    ('97', '15', '334', '247', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', '292', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "    ('98', '4', '358', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "    ('99', '4', '383', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5')\n");
-                
+
         return sql;
     }
-    
-    private String insertPageData1_5()
-    {
+
+    private String insertPageData1_5() {
         String sql = ("INSERT INTO PAGEDATA VALUES "
                 + "    ('100', '1', '346', '91', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "    ('101', '4', '327', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
@@ -413,8 +458,7 @@ public class WarlockGame {
                 + "    ('197', '1', '48', '295', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "    ('198', '13', 'dest1', 'dest2', '19', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "    ('199', '10', 'dest1', '283', '4', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5')\n");
-                
-        
+
         return sql;
     }
 
@@ -523,9 +567,8 @@ public class WarlockGame {
 
         return sql;
     }
-    
-    private String insertPageData2_5()
-    {
+
+    private String insertPageData2_5() {
         String sql = ("INSERT INTO PAGEDATA VALUES "
                 + "     ('300', '1', '102', '303', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "     ('301', '1', '82', '208', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
@@ -629,7 +672,7 @@ public class WarlockGame {
                 + "     ('400', '4', '401', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "     ('401', '35', 'dest1', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5'),\n"
                 + "     ('pgnum', 'typeofinput', 'dest1', 'dest2', 'encounternum', 'stamgainplus', 'skillgainplus', 'stamgain', 'skillgain', 'dest3', 'luckgain', 'gold', 'provisions', 'dest4', 'dest5')\n");
-        
+
         return sql;
     }
 }

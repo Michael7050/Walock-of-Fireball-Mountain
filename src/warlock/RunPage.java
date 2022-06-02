@@ -7,7 +7,7 @@ public class RunPage {
 
     public static int runPage(int startPage, CharacterSheet player) throws InterruptedException, IOException
     {
-        int destination = 0; //declare destination with error value
+        int destination = 1; //declare destination with error value
         int response;
         boolean luck;
         boolean combat;
